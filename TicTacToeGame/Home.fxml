@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0">
+      <children>
+         <StackPane layoutX="11.0" layoutY="36.0" prefHeight="35.0" prefWidth="33.0">
+            <children>
+               <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="49.0">
+                  <graphic>
+                     <ImageView fitHeight="48.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../Pictures/profil.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+         </StackPane>
+         <ImageView fitHeight="328.0" fitWidth="300.0" layoutX="30.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../Pictures/gamelogo.jpg" />
+            </image>
+         </ImageView>
+         <Label layoutX="56.0" layoutY="162.0" text="TICTACTOE" textFill="#061773">
+            <font>
+               <Font name="Snap ITC" size="36.0" />
+            </font>
+         </Label>
+         <StackPane layoutX="288.0" layoutY="36.0" prefHeight="35.0" prefWidth="33.0">
+            <children>
+               <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="49.0">
+                  <graphic>
+                     <ImageView fitHeight="48.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../Pictures/setting.jpg" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+         </StackPane>
+         <Button layoutX="78.0" layoutY="477.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="204.0" text="Start">
+            <font>
+               <Font name="Snap ITC" size="36.0" />
+            </font>
+         </Button>
+      </children></AnchorPane>
+</Scene>
