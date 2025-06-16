@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="750.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
 
     <!-- Back Button -->
-    <Button fx:id="btnBack" layoutX="14.0" layoutY="38.0" prefHeight="50.0" prefWidth="60.0" text="←">
+    <Button fx:id="btnBack" layoutX="14.0" layoutY="38.0" prefHeight="50.0" prefWidth="60.0" text="⬅">
       <font>
          <Font name="Showcard Gothic" size="24.0" />
       </font></Button>

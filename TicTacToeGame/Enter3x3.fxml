@@ -3,8 +3,6 @@
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
@@ -12,65 +10,65 @@
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <AnchorPane prefHeight="750.0" prefWidth="360.0">
       <children>
-         <Button layoutX="18.0" layoutY="126.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
+         <Button layoutX="20.0" layoutY="136.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Button layoutX="123.0" layoutY="126.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="O">
+         <Button layoutX="125.0" layoutY="136.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="O">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Button layoutX="230.0" layoutY="126.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
+         <Button layoutX="232.0" layoutY="136.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Button layoutX="18.0" layoutY="230.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="O">
+         <Button layoutX="20.0" layoutY="240.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="O">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Button layoutX="123.0" layoutY="230.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
+         <Button layoutX="125.0" layoutY="240.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Button layoutX="230.0" layoutY="230.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
+         <Button layoutX="232.0" layoutY="240.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Button layoutX="18.0" layoutY="334.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="O">
+         <Button layoutX="20.0" layoutY="344.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="O">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Button layoutX="123.0" layoutY="334.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
+         <Button layoutX="125.0" layoutY="344.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="X">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Button layoutX="230.0" layoutY="334.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="O">
+         <Button layoutX="232.0" layoutY="344.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="107.0" text="O">
             <font>
                <Font name="Forte" size="48.0" />
             </font></Button>
-         <Label layoutX="161.0" layoutY="91.0" text="3x3">
+         <Label layoutX="163.0" layoutY="101.0" text="3x3">
             <font>
                <Font size="24.0" />
             </font>
          </Label>
-         <StackPane layoutX="11.0" layoutY="36.0" prefHeight="35.0" prefWidth="33.0">
+         <StackPane layoutX="11.0" layoutY="36.0" prefHeight="50.0" prefWidth="60.0">
             <children>
-               <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="49.0">
-                  <graphic>
-                     <ImageView fitHeight="48.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../../../Pictures/backimage.jpg" />
-                        </image>
-                     </ImageView>
-                  </graphic>
+               <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" text="⬅">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
                </Button>
             </children>
          </StackPane>
-         <StackPane layoutX="180.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
-            <children>
-               <Button mnemonicParsing="false" />
-               <Label text="Undo" StackPane.alignment="BOTTOM_CENTER" />
-            </children>
-         </StackPane>
+         <Button layoutX="105.0" layoutY="483.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="👤 VS 💻" textAlignment="RIGHT">
+            <font>
+               <Font name="Showcard Gothic" size="24.0" />
+            </font>
+         </Button>
+         <Button layoutX="105.0" layoutY="548.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="👤 VS 👤" textAlignment="RIGHT">
+            <font>
+               <Font name="Showcard Gothic" size="24.0" />
+            </font>
+         </Button>
       </children></AnchorPane>
 </Scene>

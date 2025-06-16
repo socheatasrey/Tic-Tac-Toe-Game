@@ -1,0 +1,12 @@
+.bg_image {
+    -fx-background-image: url("file:///C:/Users/ASUS%20PC/OneDrive/Desktop/Tic%20Tac%20Toe%20Game/src/jghfd.jpg");
+
+    -fx-background-size: cover;
+}
+.btt {
+    -fx-background-color: Transparent;
+    -fx-border-color: Transparent;
+    -fx-focus-color: Transparent;
+    -fx-faint-focus-color: Transparent;
+
+}

@@ -26,7 +26,7 @@
                <Font name="Showcard Gothic" size="36.0" />
             </font>
          </Label>
-         <Button layoutX="78.0" layoutY="506.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="204.0" text="Start">
+         <Button layoutX="78.0" layoutY="506.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="204.0" text="Start" textFill="#1e0b7b">
             <font>
                <Font name="Showcard Gothic" size="36.0" />
             </font>
