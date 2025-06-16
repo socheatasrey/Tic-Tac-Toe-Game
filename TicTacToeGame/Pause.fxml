@@ -7,9 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane prefHeight="750.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="your.package.name.MediaController">
-
-    <!-- Center VBox with all buttons -->
-    <center>
+   <center>
         <VBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER">
            <Button style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Pause" />
             <!-- Row 1: Volume + Stop -->
@@ -42,5 +40,5 @@
                <Font size="18.0" />
             </font></Button>
         </VBox>
-    </center>
+   </center>
 </BorderPane>
