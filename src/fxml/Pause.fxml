@@ -11,11 +11,11 @@
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PauseController">
-    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../style.css">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
          <ImageView fitHeight="497.0" fitWidth="340.0" layoutX="10.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../Downloads/frame-removebg-preview.png" />
+               <Image url="@../resources/images/pause_bg.jpg" />
             </image>
          </ImageView>
          <Label layoutX="107.0" layoutY="150.0" text="Pause">
@@ -30,7 +30,7 @@
                      <Font name="Showcard Gothic" size="64.0" />
                   </font>
                </Label>
-               <ToggleButton fx:id="togglebutton_sound" mnemonicParsing="false" onAction="#togglebutton_sound_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_on" stylesheets="@../style.css" text="ON">
+               <ToggleButton fx:id="togglebutton_sound" mnemonicParsing="false" onAction="#togglebutton_sound_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_on" text="ON">
                   <font>
                      <Font name="Showcard Gothic" size="24.0" />
                   </font>
@@ -44,7 +44,7 @@
                      <Font name="Showcard Gothic" size="64.0" />
                   </font>
                </Label>
-               <ToggleButton fx:id="togglebutton_music" mnemonicParsing="false" onAction="#togglebutton_music_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_on" stylesheets="@../style.css" text="ON">
+               <ToggleButton fx:id="togglebutton_music" mnemonicParsing="false" onAction="#togglebutton_music_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_on" text="ON">
                   <font>
                      <Font name="Showcard Gothic" size="24.0" />
                   </font>
@@ -53,7 +53,7 @@
          </HBox>
          <HBox alignment="CENTER" layoutY="445.0" prefHeight="60.0" prefWidth="360.0" spacing="60.0">
             <children>
-               <Button fx:id="button_continue" minHeight="50.0" mnemonicParsing="false" onAction="#button_continue_action" prefWidth="100.0" styleClass="btt_continue" stylesheets="@../style.css" text="&gt;&gt;">
+               <Button fx:id="button_continue" minHeight="50.0" mnemonicParsing="false" onAction="#button_continue_action" prefWidth="100.0" styleClass="btt_continue" text="&gt;&gt;">
                   <font>
                      <Font name="Showcard Gothic" size="36.0" />
                   </font>
@@ -62,12 +62,12 @@
          </HBox>
          <HBox alignment="CENTER" layoutY="365.0" prefHeight="46.0" prefWidth="360.0" spacing="30.0">
             <children>
-               <Button fx:id="button_home" mnemonicParsing="false" onAction="#button_home_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_home" stylesheets="@../style.css" text="🏠">
+               <Button fx:id="button_home" mnemonicParsing="false" onAction="#button_home_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_home" text="🏠">
                   <font>
                      <Font name="Showcard Gothic" size="36.0" />
                   </font>
                </Button>
-               <Button fx:id="button_playagain" mnemonicParsing="false" onAction="#button_playagain_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_playagain" stylesheets="@../style.css" text="🔁">
+               <Button fx:id="button_playagain" mnemonicParsing="false" onAction="#button_playagain_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_playagain" text="🔁">
                   <font>
                      <Font name="Showcard Gothic" size="36.0" />
                   </font>

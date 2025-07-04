@@ -9,25 +9,25 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../style.css">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Option3x3Controller">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
-         <Label layoutX="153.0" layoutY="143.0" text="3x3" textFill="#2d3d2d">
+         <Label layoutX="153.0" layoutY="96.0" prefHeight="41.0" prefWidth="66.0" text="3x3" textFill="#2d3d2d">
             <font>
                <Font name="Snap ITC" size="24.0" />
             </font>
          </Label>
-         <Button layoutX="105.0" layoutY="430.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsAI" stylesheets="@../style.css" text="👤 VS 💻" textAlignment="RIGHT" textFill="#2d3d2d">
+         <Button layoutX="105.0" layoutY="430.0" mnemonicParsing="false" onAction="#bttn_ai_3x3_play" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsAI" text="👤 VS 💻" textAlignment="RIGHT" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
          </Button>
-         <Button layoutX="105.0" layoutY="499.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsPlayer" stylesheets="@../style.css" text="👤 VS 👤" textAlignment="RIGHT" textFill="#2d3d2d">
+         <Button layoutX="105.0" layoutY="499.0" mnemonicParsing="false" onAction="#bttn_pvp_play" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsPlayer" text="👤 VS 👤" textAlignment="RIGHT" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
          </Button>
-         <GridPane gridLinesVisible="true" layoutX="82.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0">
+         <GridPane gridLinesVisible="true" layoutX="85.0" layoutY="175.0" prefHeight="200.0" prefWidth="197.0">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -39,12 +39,7 @@
              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
            </rowConstraints>
          </GridPane>
-         <Button layoutX="282.0" layoutY="242.0" mnemonicParsing="false" styleClass="btt_changelevel" stylesheets="@../style.css" text="&gt;">
-            <font>
-               <Font name="Solid Edge GOST1 Symbols" size="36.0" />
-            </font>
-         </Button>
-         <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="57.0" styleClass="btt_return" stylesheets="@../style.css" text="⬅">
+         <Button fx:id="bttn_back" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_back_action" prefHeight="51.0" prefWidth="57.0" styleClass="btt_return" text="⬅">
             <font>
                <Font size="24.0" />
             </font>

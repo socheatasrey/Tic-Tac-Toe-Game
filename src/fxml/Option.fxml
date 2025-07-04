@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OptionController">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0" style="-fx-background-color: white;" styleClass="bg_image">
+      <children>
+         <Button fx:id="button_profile" layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_profile_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_profile" stylesheets="@../css/style.css" text="👤" textFill="#2d3d2d">
+            <font>
+               <Font name="Showcard Gothic" size="24.0" />
+            </font>
+         </Button>
+         <Label layoutX="120.0" layoutY="167.0" text="OPtION" textFill="#2d3d2d">
+            <font>
+               <Font name="Showcard Gothic" size="36.0" />
+            </font>
+         </Label>
+         <Button layoutX="78.0" layoutY="297.0" mnemonicParsing="false" onAction="#bttn_3x3_option" prefHeight="78.0" prefWidth="204.0" styleClass="btt_start" stylesheets="@../css/style.css" text="3 x 3" textFill="#2d3d2d">
+            <font>
+               <Font name="Showcard Gothic" size="36.0" />
+            </font>
+         </Button>
+         <Button fx:id="button_setting" layoutX="270.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_setting_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_settings" stylesheets="@../css/style.css" text="⚙" textFill="#2d3d2d">
+            <font>
+               <Font name="Showcard Gothic" size="24.0" />
+            </font>
+         </Button>
+         <Button layoutX="78.0" layoutY="430.0" mnemonicParsing="false" onAction="#bttn_6x6_option" prefHeight="78.0" prefWidth="204.0" styleClass="btt_start" stylesheets="@../css/style.css" text="6 x6 " textFill="#2d3d2d">
+            <font>
+               <Font name="Showcard Gothic" size="36.0" />
+            </font>
+         </Button>
+      </children></AnchorPane>
+</Scene>

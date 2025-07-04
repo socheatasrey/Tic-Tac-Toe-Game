@@ -1,3 +1,4 @@
+package controller;
 
 
 
@@ -24,11 +25,11 @@ public class HomeController {
 
         try {
             Stage stage = (Stage) button_profile.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("Profile.fxml"));
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Profile.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            
+            e.printStackTrace();
         }
 
     }
@@ -38,25 +39,24 @@ public class HomeController {
 
         try {
             Stage stage = (Stage) button_setting.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("Setting.fxml"));
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Setting.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            
+            e.printStackTrace();
         }
 
     }
 
     @FXML
     void button_start_action(ActionEvent event) {
-
         try {
             Stage stage = (Stage) button_start.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("Enter3x3.fxml"));
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Option.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
-            
+            e.printStackTrace();
         }
 
     }

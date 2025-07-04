@@ -1,3 +1,4 @@
+package controller;
 
 
 import javax.sound.sampled.Clip;
@@ -38,7 +39,7 @@ public class PauseController {
         try {
 
             Stage stage = (Stage) button_home.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("Home.fxml"));
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

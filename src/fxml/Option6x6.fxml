@@ -9,20 +9,20 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../style.css">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Option6x6Controller">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
          <Label layoutX="153.0" layoutY="143.0" text="6x6" textFill="#2d3d2d">
             <font>
                <Font name="Snap ITC" size="24.0" />
             </font>
          </Label>
-         <Button layoutX="105.0" layoutY="430.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsAI" stylesheets="@../style.css" text="👤 VS 💻" textAlignment="RIGHT" textFill="#2d3d2d">
+         <Button layoutX="105.0" layoutY="430.0" mnemonicParsing="false" onAction="#bttn_6x6_ai" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsAI" text="👤 VS 💻" textAlignment="RIGHT" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
          </Button>
-         <Button layoutX="105.0" layoutY="499.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsPlayer" stylesheets="@../style.css" text="👤 VS 👤" textAlignment="RIGHT" textFill="#2d3d2d">
+         <Button layoutX="105.0" layoutY="499.0" mnemonicParsing="false" onAction="#bttn_6x6_pvp" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsPlayer" text="👤 VS 👤" textAlignment="RIGHT" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
@@ -45,12 +45,7 @@
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
            </rowConstraints>
          </GridPane>
-         <Button layoutX="14.0" layoutY="241.0" mnemonicParsing="false" styleClass="btt_changelevel" stylesheets="@../style.css" text="&lt;">
-            <font>
-               <Font name="Solid Edge GOST1 Symbols" size="36.0" />
-            </font>
-         </Button>
-         <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="56.0" styleClass="btt_return" stylesheets="@../style.css" text="⬅">
+         <Button fx:id="bttn_back" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_back_action" prefHeight="51.0" prefWidth="56.0" styleClass="btt_return" text="⬅">
             <font>
                <Font size="24.0" />
             </font>
