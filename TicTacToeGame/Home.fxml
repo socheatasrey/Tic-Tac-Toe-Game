@@ -8,30 +8,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="750.0" prefWidth="360.0">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomeController">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0" style="-fx-background-color: white;" styleClass="bg_image">
       <children>
-         <Button layoutX="30.0" layoutY="35.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" text="👤">
+         <Button fx:id="button_profile" layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_profile_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_profile" stylesheets="@../style.css" text="👤" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
          </Button>
-         <ImageView fitHeight="328.0" fitWidth="300.0" layoutX="30.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="186.0" fitWidth="176.0" layoutX="92.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../Pictures/gamelogo.jpg" />
+               <Image url="@TicTacToe_logo.jpg" />
             </image>
          </ImageView>
-         <Label layoutX="84.0" layoutY="162.0" text="TICTACTOE" textFill="#061773">
+         <Label layoutX="84.0" layoutY="168.0" text="TICTACTOE" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="36.0" />
             </font>
          </Label>
-         <Button layoutX="78.0" layoutY="506.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="204.0" text="Start" textFill="#1e0b7b">
+         <Button fx:id="button_start" layoutX="78.0" layoutY="375.0" mnemonicParsing="false" onAction="#button_start_action" prefHeight="78.0" prefWidth="204.0" styleClass="btt_start" stylesheets="@../style.css" text="Start" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="36.0" />
             </font>
          </Button>
-         <Button layoutX="270.0" layoutY="35.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" text="⚙">
+         <Button fx:id="button_setting" layoutX="270.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_setting_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_settings" stylesheets="@../style.css" text="⚙" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
