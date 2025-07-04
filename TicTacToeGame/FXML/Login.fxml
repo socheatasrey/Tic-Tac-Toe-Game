@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0" style="-fx-background-color: white;">
+      <children>
+         <ImageView fitHeight="361.0" fitWidth="359.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../Pictures/tic-tac-toe-icon-in-illustration-vector.jpg" />
+            </image>
+         </ImageView>
+      </children></AnchorPane>
+</Scene>
