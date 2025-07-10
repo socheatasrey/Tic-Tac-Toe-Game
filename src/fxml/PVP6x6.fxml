@@ -15,7 +15,7 @@
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PVP6x6Controller">
    <root>
-      <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="btt_gridpane_6x6" stylesheets="@style.css">
+      <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
          <children>
             <ImageView fitHeight="750.0" fitWidth="360.0" opacity="0.8" pickOnBounds="true">
                <image>
@@ -24,12 +24,12 @@
             </ImageView>
             <Label layoutX="54.0" layoutY="146.0" text="Player1">
                <font>
-                  <Font name="Lucida Console" size="20.0" />
+                  <Font name="Comic Sans MS" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="228.0" layoutY="145.0" text="Player2">
+            <Label layoutX="232.0" layoutY="141.0" text="Player2">
                <font>
-                  <Font name="Lucida Console" size="20.0" />
+                  <Font name="Comic Sans MS" size="20.0" />
                </font>
             </Label>
             <Label layoutX="75.0" layoutY="75.0" text="O">
@@ -42,9 +42,9 @@
                   <Font name="Snap ITC" size="50.0" />
                </font>
             </Label>
-            <Label layoutX="158.0" layoutY="90.0" text="VS">
+            <Label layoutX="156.0" layoutY="82.0" text="VS">
                <font>
-                  <Font name="Showcard Gothic" size="36.0" />
+                  <Font name="Comic Sans MS Bold" size="36.0" />
                </font>
             </Label>
             <Label layoutX="17.0" layoutY="205.0" text="O O O O ">
@@ -52,28 +52,59 @@
                   <Font name="Snap ITC" size="24.0" />
                </font>
             </Label>
-            <StackPane layoutX="104.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
+            <StackPane layoutX="106.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
                <children>
                   <Button fx:id="button_concede" mnemonicParsing="false" onAction="#button_concede_on_action" prefHeight="51.0" prefWidth="57.0" styleClass="btt_concede" stylesheets="@../css/style.css" text="🏁">
                      <font>
                         <Font size="24.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/concede.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" text="Concede" StackPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
                </children>
             </StackPane>
-            <StackPane layoutX="180.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
+            <StackPane layoutX="182.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
                <children>
                   <Button fx:id="button_redo" mnemonicParsing="false" onAction="#button_redo_on_action" prefHeight="50.0" prefWidth="50.0" styleClass="btt_redo" stylesheets="@../css/style.css" text="⬅">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/redo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
+                  <Label text="Re-do" StackPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
                </children>
             </StackPane>
             <Button fx:id="button_pause" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#button_pause_on_action" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 25;" stylesheets="@../css/style.css" text="⏸">
                <font>
                   <Font size="18.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/pause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Label layoutX="197.0" layoutY="681.0" text="Re-do">
                <font>
@@ -91,17 +122,17 @@
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
                   <Button fx:id="button_0x0" mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../css/style.css">
                      <font>
@@ -246,7 +277,8 @@
                   <Button fx:id="button_5x5" mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../css/style.css" GridPane.columnIndex="5" GridPane.rowIndex="5">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                </children>
                <stylesheets>
                   <URL value="@style.css" />

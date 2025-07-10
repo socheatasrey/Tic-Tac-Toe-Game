@@ -17,7 +17,6 @@ public class Option6x6Controller {
 
     @FXML
     void bttn_6x6_ai(ActionEvent event) {
-        CurrentTempUtil.currentProgress = new GameHistoryEntry();
         CurrentTempUtil.currentProgress.setOpponetName("AI");
         SoundUtil.clik();
         try {

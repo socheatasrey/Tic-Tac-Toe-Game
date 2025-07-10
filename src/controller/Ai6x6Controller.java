@@ -4,6 +4,7 @@ import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -55,13 +56,12 @@ public class Ai6x6Controller {
         buttons[index].setDisable(true);
 
         if (checkWin("X")) {
-            System.out.println("You win!");
-            disableAllButtons();
+            goToResultScene("WIN");
             return;
         }
 
         if (isBoardFull()) {
-            System.out.println("It's a draw!");
+            goToResultScene("DRAW");
             return;
         }
 
@@ -75,8 +75,7 @@ public class Ai6x6Controller {
     }
 
     private void runBalancedAiLogic() {
-        // Add randomness to allow player to win sometimes
-        boolean makeMistake = random.nextDouble() < 0.2; // 20% chance to make less optimal move
+        boolean makeMistake = random.nextDouble() < 0.2;
 
         List<Integer> emptyCells = new ArrayList<>();
         for (int i = 0; i < 36; i++) {
@@ -116,7 +115,7 @@ public class Ai6x6Controller {
                 for (int[] dir : directions) {
                     int count = 0;
                     int blocked = 0;
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < 4; i++) {
                         int nr = r + i * dir[0];
                         int nc = c + i * dir[1];
                         if (nr < 0 || nr >= 6 || nc < 0 || nc >= 6) {
@@ -130,10 +129,10 @@ public class Ai6x6Controller {
                             break;
                         }
                     }
-                    if (count == 5) return 10000;
-                    if (count == 4 && blocked == 0) score += 500;
-                    else if (count == 3 && blocked == 0) score += 100;
-                    else if (count == 2 && blocked == 0) score += 30;
+                    if (count == 4) return 10000;
+                    if (count == 3 && blocked == 0) score += 500;
+                    else if (count == 2 && blocked == 0) score += 100;
+                    else if (count == 1 && blocked == 0) score += 30;
                 }
             }
         }
@@ -146,31 +145,30 @@ public class Ai6x6Controller {
         buttons[index].setDisable(true);
 
         if (checkWin("O")) {
-            System.out.println("AI wins!");
-            disableAllButtons();
+            goToResultScene("LOSE");
         } else if (isBoardFull()) {
-            System.out.println("It's a draw!");
+            goToResultScene("DRAW");
         }
     }
 
     private boolean checkWin(String symbol) {
         for (int row = 0; row < 6; row++) {
-            for (int col = 0; col <= 1; col++) {
+            for (int col = 0; col <= 2; col++) {
                 if (match(symbol, row, col, 0, 1)) return true;
             }
         }
         for (int col = 0; col < 6; col++) {
-            for (int row = 0; row <= 1; row++) {
+            for (int row = 0; row <= 2; row++) {
                 if (match(symbol, row, col, 1, 0)) return true;
             }
         }
-        for (int row = 0; row <= 1; row++) {
-            for (int col = 0; col <= 1; col++) {
+        for (int row = 0; row <= 2; row++) {
+            for (int col = 0; col <= 2; col++) {
                 if (match(symbol, row, col, 1, 1)) return true;
             }
         }
-        for (int row = 4; row < 6; row++) {
-            for (int col = 0; col <= 1; col++) {
+        for (int row = 3; row < 6; row++) {
+            for (int col = 0; col <= 2; col++) {
                 if (match(symbol, row, col, -1, 1)) return true;
             }
         }
@@ -178,7 +176,7 @@ public class Ai6x6Controller {
     }
 
     private boolean match(String symbol, int row, int col, int dRow, int dCol) {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             int r = row + i * dRow;
             int c = col + i * dCol;
             if (r < 0 || r >= 6 || c < 0 || c >= 6 || !symbol.equals(board[r * 6 + c])) {
@@ -195,13 +193,7 @@ public class Ai6x6Controller {
         return true;
     }
 
-    private void disableAllButtons() {
-        for (Button b : buttons) {
-            b.setDisable(true);
-        }
-    }
 
-    // Button event handlers remain unchanged
     @FXML void button_play1_action(ActionEvent e) { handlePlayerMove(0); }
     @FXML void button_play2_action(ActionEvent e) { handlePlayerMove(1); }
     @FXML void button_play3_action(ActionEvent e) { handlePlayerMove(2); }
@@ -239,24 +231,32 @@ public class Ai6x6Controller {
     @FXML void button_play35_action(ActionEvent e) { handlePlayerMove(34); }
     @FXML void button_play36_action(ActionEvent e) { handlePlayerMove(35); }
 
-    @FXML void Concede_button_action(ActionEvent e) { 
-        disableAllButtons(); System.out.println("You gave up."); 
-    }
+    @FXML void Concede_button_action(ActionEvent e) { goToResultScene("CONCEDE!"); }
     @FXML void Pause_button_action(ActionEvent event) {
-         try {
-            Stage stage = (Stage) Pause_button.getScene().getWindow();
+        try {
+            Stage stage = (Stage) button_play1.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Pause.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
-        } 
+        }
     }
-    @FXML void Redo_button_action(ActionEvent e) {
-        resetBoard(); System.out.println("Game restarted."); 
+    @FXML void Redo_button_action(ActionEvent e) { resetBoard(); }
+
+    private void goToResultScene(String resultMessage) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Result.fxml"));
+            Parent root = loader.load();
+
+            ResultController controller = loader.getController();
+            controller.setResultText(resultMessage);
+            controller.setFromScene("/fxml/Ai6x6.fxml");
+
+            Stage stage = (Stage) button_play1.getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
-
-
-
-

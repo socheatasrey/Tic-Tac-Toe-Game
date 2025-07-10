@@ -131,8 +131,8 @@ public class PVP3x3Controller implements Initializable {
     @FXML
     void button_pause_on_action(ActionEvent event) {
         try {
-            Stage stage = (Stage) button_pause.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Profile.fxml"));
+            Stage stage = (Stage) button_0x0.getScene().getWindow();
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Pause.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

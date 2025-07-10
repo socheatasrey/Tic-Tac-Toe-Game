@@ -14,11 +14,11 @@
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Ai6x6Controller">
    <root>
-      <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="btt_gridpane_6x6" stylesheets="@../css/style.css">
+      <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="btt_gridpane_6x6">
          <children>
             <ImageView fitHeight="750.0" fitWidth="360.0" opacity="0.8" pickOnBounds="true">
                <image>
-                  <Image url="@../resources/images/bg/jghfd.jpg" />
+                  <Image url="@../src/jghfd.jpg" />
                </image>
             </ImageView>
             <Label layoutX="54.0" layoutY="146.0" text="Player1">
@@ -46,7 +46,7 @@
                   <Font name="Showcard Gothic" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="17.0" layoutY="205.0" text="O O O O O O">
+            <Label layoutX="17.0" layoutY="205.0" text="O O O O ">
                <font>
                   <Font name="Snap ITC" size="24.0" />
                </font>

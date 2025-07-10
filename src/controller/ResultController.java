@@ -43,18 +43,23 @@ public class ResultController {
         String labelMessage;
         String status = "draw";
 
-        if (resultMessage.contains("X")) {
-            labelMessage = "Player 1 (" + CurrentTempUtil.currentUser.getUsername() + ") Won!";
-            status = "win";
-        } else if (resultMessage.contains("O")) {
-            labelMessage = "Player 2 (" + CurrentTempUtil.currentProgress.getOpponentName() + ") Won!";
-            status = "lose";
-        } else if (resultMessage.contains("DRAW")) {
-            labelMessage = "It's a Draw!";
-        } else if (resultMessage.contains("CONCEDE")) {
-            labelMessage = "Game Conceded!";
-        } else {
-            labelMessage = "Game Over!";
+        switch (resultMessage.toUpperCase()) {
+            case "WIN":
+                labelMessage = "Player (" + CurrentTempUtil.currentUser.getUsername() + ") Won!";
+                status = "win";
+                break;
+            case "LOSE":
+                labelMessage = "Player (" + CurrentTempUtil.currentProgress.getOpponentName() + ") Won!";
+                status = "lose";
+                break;
+            case "DRAW":
+                labelMessage = "It's a Draw!";
+                break;
+            case "CONCEDE":
+                labelMessage = "Game Conceded!";
+                break;
+            default:
+                labelMessage = "Game Over!";
         }
 
         label_win_or_lose.setText(labelMessage);
@@ -110,8 +115,9 @@ public class ResultController {
     void button_3x3_action(ActionEvent event) {
         try {
             Stage stage = (Stage) button_3x3.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/PVP3x3.fxml"));
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Option3x3.fxml"));
             stage.setScene(scene);
+            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -121,8 +127,9 @@ public class ResultController {
     void button_6x6_action(ActionEvent event) {
         try {
             Stage stage = (Stage) button_6x6.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/PVP6x6.fxml"));
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Option6x6.fxml"));
             stage.setScene(scene);
+            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }

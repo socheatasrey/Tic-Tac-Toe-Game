@@ -128,6 +128,19 @@
 .btt_login:hover {
     -fx-opacity: 0.9;
 }
+.btt_level {
+    -fx-background-color: linear-gradient(#63f3798d, #92ee8d);
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+}
+
+.btt_level:hover {
+    -fx-opacity: 0.9;
+}
 
 
 .textfield_name {

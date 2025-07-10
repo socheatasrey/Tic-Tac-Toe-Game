@@ -23,12 +23,12 @@
             </ImageView>
             <Label layoutX="54.0" layoutY="146.0" text="Player1">
                <font>
-                  <Font name="Lucida Console" size="20.0" />
+                  <Font name="Comic Sans MS" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="254.0" layoutY="146.0" text="AI">
+            <Label layoutX="254.0" layoutY="141.0" text="AI">
                <font>
-                  <Font name="Lucida Console" size="20.0" />
+                  <Font name="Comic Sans MS" size="20.0" />
                </font>
             </Label>
             <Label layoutX="75.0" layoutY="75.0" text="O">
@@ -41,38 +41,69 @@
                   <Font name="Snap ITC" size="50.0" />
                </font>
             </Label>
-            <Label layoutX="158.0" layoutY="90.0" text="VS">
+            <Label layoutX="156.0" layoutY="82.0" text="VS">
                <font>
-                  <Font name="Showcard Gothic" size="36.0" />
+                  <Font name="Comic Sans MS Bold" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="17.0" layoutY="205.0" text="O O O">
+            <Label layoutX="13.0" layoutY="189.0" text="O O O">
                <font>
                   <Font name="Snap ITC" size="24.0" />
                </font>
             </Label>
-            <StackPane layoutX="104.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
+            <StackPane layoutX="106.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
                <children>
                   <Button fx:id="Concede_button" mnemonicParsing="false" onAction="#Concede_button_action" prefHeight="51.0" prefWidth="57.0" styleClass="btt_concede" text="🏁">
                      <font>
                         <Font size="24.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/concede.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" text="Concede" StackPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
                </children>
             </StackPane>
-            <StackPane layoutX="180.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
+            <StackPane layoutX="182.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
                <children>
                   <Button fx:id="Redo_button" mnemonicParsing="false" onAction="#Redo_button_action" prefHeight="50.0" prefWidth="50.0" styleClass="btt_redo" text="⬅">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/redo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
+                  <Label text="Re-do" StackPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
                </children>
             </StackPane>
             <Button fx:id="bttn_pause" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_pause_action" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 25;" styleClass="btt_stop" text="⏸">
                <font>
                   <Font size="18.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/pause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="13.0" layoutY="250.0" prefHeight="335.0" prefWidth="335.0" styleClass="btt_gridpane_3x3">
                <columnConstraints>
@@ -133,16 +164,6 @@
                   </Button>
                </children>
             </GridPane>
-            <Label layoutX="197.0" layoutY="681.0" text="Re-do">
-               <font>
-                  <Font name="Showcard Gothic" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="112.0" layoutY="681.0" text="Concede">
-               <font>
-                  <Font name="Showcard Gothic" size="13.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
    </root>

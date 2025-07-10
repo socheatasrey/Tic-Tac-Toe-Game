@@ -9,9 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
-import model.GameHistoryEntry;
 import util.CurrentTempUtil;
-import util.currentTempUtil;
 
 import java.net.URL;
 import java.util.Arrays;
@@ -149,11 +147,10 @@ public class PVP6x6Controller implements Initializable {
     @FXML
     void button_pause_on_action(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Pause.fxml"));
-            Scene scene = new Scene(loader.load());
-
-            Stage stage = (Stage) button_pause.getScene().getWindow();
+            Stage stage = (Stage) button_0x0.getScene().getWindow();
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Pause.fxml"));
             stage.setScene(scene);
+            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }

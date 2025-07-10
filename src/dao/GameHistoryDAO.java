@@ -54,4 +54,23 @@ public class GameHistoryDAO {
 
         return history;
     }
+
+    public static int countGamesByStatus(int userId, String status) {
+    String sql = "SELECT COUNT(*) FROM games WHERE user_id = ? AND game_status = ?";
+    try (Connection conn = DBConnection.connect();
+         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+        pstmt.setInt(1, userId);
+        pstmt.setString(2, status);
+
+        ResultSet rs = pstmt.executeQuery();
+        if (rs.next()) {
+            return rs.getInt(1);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return 0;
+}
+
 }

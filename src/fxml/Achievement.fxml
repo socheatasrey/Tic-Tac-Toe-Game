@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingController">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AchievementController">
     <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
          <ImageView fitHeight="619.0" fitWidth="385.0" layoutX="6.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
@@ -53,42 +53,42 @@
                <Image url="@../resources/images/statistic_bg.png" />
             </image>
          </ImageView>
-         <Label layoutX="90.0" layoutY="245.0" text="WIN">
+         <Label layoutX="90.0" layoutY="245.0" text="WINS">
             <font>
                <Font name="Comic Sans MS" size="24.0" />
             </font>
          </Label>
-         <Label layoutX="90.0" layoutY="325.0" text="LOSE">
+         <Label layoutX="90.0" layoutY="325.0" text="LOSES">
             <font>
                <Font name="Comic Sans MS" size="24.0" />
             </font>
          </Label>
-         <Label layoutX="90.0" layoutY="405.0" text="DREW">
+         <Label layoutX="90.0" layoutY="405.0" text="DRAWS">
             <font>
                <Font name="Comic Sans MS" size="24.0" />
             </font>
          </Label>
-         <Label layoutX="90.0" layoutY="485.0" text="TOTAL">
+         <Label layoutX="90.0" layoutY="485.0" text="TOTALS">
             <font>
                <Font name="Comic Sans MS" size="24.0" />
             </font>
          </Label>
-         <Label layoutX="260.0" layoutY="245.0" text="3">
+         <Label fx:id="lbl_win" layoutX="260.0" layoutY="245.0" text="3">
             <font>
                <Font name="Comic Sans MS" size="24.0" />
             </font>
          </Label>
-         <Label layoutX="260.0" layoutY="325.0" text="4">
+         <Label fx:id="lbl_lose" layoutX="260.0" layoutY="325.0" text="4">
             <font>
                <Font name="Comic Sans MS" size="24.0" />
             </font>
          </Label>
-         <Label layoutX="260.0" layoutY="405.0" text="2">
+         <Label fx:id="lbl_draws" layoutX="260.0" layoutY="405.0" text="2">
             <font>
                <Font name="Comic Sans MS" size="24.0" />
             </font>
          </Label>
-         <Label layoutX="260.0" layoutY="485.0" text="9">
+         <Label fx:id="lbl_totals" layoutX="260.0" layoutY="485.0" text="9">
             <font>
                <Font name="Comic Sans MS" size="24.0" />
             </font>
