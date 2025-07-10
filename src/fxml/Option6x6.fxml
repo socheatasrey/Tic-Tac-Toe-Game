@@ -3,31 +3,93 @@
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Option6x6Controller">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Option3x3Controller">
     <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
-         <Label layoutX="153.0" layoutY="143.0" text="6x6" textFill="#2d3d2d">
+         <ImageView fitHeight="619.0" fitWidth="385.0" layoutX="6.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../resources/images/frame_bg.png" />
+            </image>
+         </ImageView>
+         <Label layoutX="142.0" layoutY="166.0" prefHeight="42.0" prefWidth="111.0" text="6 x 6" textFill="#2d3d2d">
             <font>
-               <Font name="Snap ITC" size="24.0" />
+               <Font name="Copperplate Gothic Bold" size="36.0" />
             </font>
          </Label>
-         <Button layoutX="105.0" layoutY="430.0" mnemonicParsing="false" onAction="#bttn_6x6_ai" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsAI" text="👤 VS 💻" textAlignment="RIGHT" textFill="#2d3d2d">
+         <Button layoutX="104.0" layoutY="453.0" mnemonicParsing="false" onAction="#bttn_ai_3x3_play" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsAI" stylesheets="@../css/style.css" textAlignment="RIGHT" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
+            <graphic>
+               <HBox alignment="CENTER">
+                  <children>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/profile.png" />
+                        </image>
+                     </ImageView>
+                     <Label text="VS">
+                        <font>
+                           <Font name="Comic Sans MS" size="18.0" />
+                        </font>
+                     </Label>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/computer.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </HBox>
+            </graphic>
          </Button>
-         <Button layoutX="105.0" layoutY="499.0" mnemonicParsing="false" onAction="#bttn_6x6_pvp" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsPlayer" text="👤 VS 👤" textAlignment="RIGHT" textFill="#2d3d2d">
+         <Button layoutX="104.0" layoutY="522.0" mnemonicParsing="false" onAction="#bttn_pvp_play" prefHeight="50.0" prefWidth="150.0" styleClass="btt_playerVsAI" stylesheets="@../css/style.css" textAlignment="RIGHT" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
+            <graphic>
+               <HBox alignment="CENTER" prefHeight="38.0" prefWidth="101.0">
+                  <children>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/profile.png" />
+                        </image>
+                     </ImageView>
+                     <Label alignment="CENTER" contentDisplay="CENTER" text="VS">
+                        <font>
+                           <Font name="Comic Sans MS" size="18.0" />
+                        </font>
+                     </Label>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/profile.png" />
+                        </image>
+                     </ImageView>
+                  </children>
+               </HBox>
+            </graphic>
          </Button>
-         <GridPane gridLinesVisible="true" layoutX="82.0" layoutY="175.0" prefHeight="200.0" prefWidth="200.0">
+         <Button fx:id="bttn_back" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_back_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_return">
+            <font>
+               <Font size="24.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/return.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <GridPane gridLinesVisible="true" layoutX="81.0" layoutY="240.0" prefHeight="200.0" prefWidth="197.0">
            <columnConstraints>
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -37,18 +99,13 @@
              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
            </columnConstraints>
            <rowConstraints>
-             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
            </rowConstraints>
          </GridPane>
-         <Button fx:id="bttn_back" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_back_action" prefHeight="51.0" prefWidth="56.0" styleClass="btt_return" text="⬅">
-            <font>
-               <Font size="24.0" />
-            </font>
-         </Button>
       </children></AnchorPane>
 </Scene>

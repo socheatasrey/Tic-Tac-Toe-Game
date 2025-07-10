@@ -14,21 +14,16 @@
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <root>
-      <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="btt_gridpane_6x6" stylesheets="@style.css">
+      <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
          <children>
-            <ImageView fitHeight="750.0" fitWidth="360.0" opacity="0.8" pickOnBounds="true">
-               <image>
-                  <Image url="@../src/jghfd.jpg" />
-               </image>
-            </ImageView>
-            <Label layoutX="54.0" layoutY="146.0" text="Player1">
+            <Label layoutX="65.0" layoutY="141.0" text="Player1">
                <font>
-                  <Font name="Lucida Console" size="20.0" />
+                  <Font name="Comic Sans MS" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="228.0" layoutY="145.0" text="Player2">
+            <Label layoutX="232.0" layoutY="141.0" text="Player2">
                <font>
-                  <Font name="Lucida Console" size="20.0" />
+                  <Font name="Comic Sans MS" size="20.0" />
                </font>
             </Label>
             <Label layoutX="75.0" layoutY="75.0" text="O">
@@ -41,211 +36,268 @@
                   <Font name="Snap ITC" size="50.0" />
                </font>
             </Label>
-            <Label layoutX="158.0" layoutY="90.0" text="VS">
+            <Label layoutX="156.0" layoutY="82.0" text="VS">
                <font>
-                  <Font name="Showcard Gothic" size="36.0" />
+                  <Font name="Comic Sans MS Bold" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="17.0" layoutY="205.0" text="O O O O O O">
+            <Label layoutX="13.0" layoutY="189.0" text="O O O O O O">
                <font>
                   <Font name="Snap ITC" size="24.0" />
                </font>
             </Label>
-            <StackPane layoutX="104.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
+            <StackPane layoutX="106.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="57.0" styleClass="btt_concede" stylesheets="@../style.css" text="🏁">
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="50.0" styleClass="btt_concede" stylesheets="@../css/style.css">
                      <font>
                         <Font size="24.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/concede.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" text="Concede" StackPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
                </children>
             </StackPane>
-            <StackPane layoutX="180.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
+            <StackPane layoutX="182.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" styleClass="btt_redo" stylesheets="@../style.css" text="⬅">
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="50.0" styleClass="btt_concede" stylesheets="@../css/style.css">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/images/redo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
+                  <Label text="Re-do" StackPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </Label>
                </children>
             </StackPane>
-            <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 25;" styleClass="btt_stop" stylesheets="@../style.css" text="⏸">
+            <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="btt_return" stylesheets="@../css/style.css">
                <font>
                   <Font size="18.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/pause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Label layoutX="197.0" layoutY="681.0" text="Re-do">
-               <font>
-                  <Font name="Showcard Gothic" size="13.0" />
-               </font>
-            </Label>
-            <Label layoutX="112.0" layoutY="681.0" text="Concede">
-               <font>
-                  <Font name="Showcard Gothic" size="13.0" />
-               </font>
-            </Label>
-            <GridPane gridLinesVisible="true" layoutX="12.0" layoutY="250.0" prefHeight="335.0" prefWidth="335.0" stylesheets="@style.css">
-              <columnConstraints>
+            <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="12.0" layoutY="221.0" prefHeight="335.0" prefWidth="335.0" styleClass="btt_gridpane_3x3" stylesheets="@style.css">
+               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" text="X">
+                  <Button id="btt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="137.0" prefWidth="123.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" text="X" GridPane.columnIndex="1">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="156.0" prefWidth="129.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="2">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="131.0" prefWidth="140.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" text="X" GridPane.columnIndex="3">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="146.0" prefWidth="117.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="4">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="131.0" prefWidth="124.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="5">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="126.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="5" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.rowIndex="1">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="117.0" prefWidth="111.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" text="O" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="122.0" prefWidth="116.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" text="O" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="1">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="5" GridPane.rowIndex="1">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.rowIndex="2">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="2">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="2">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="5" GridPane.rowIndex="2">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.rowIndex="3">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="3">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="3">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="5" GridPane.rowIndex="3">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.rowIndex="4">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="4">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="4">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="5" GridPane.rowIndex="4">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.rowIndex="5">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="5">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="5">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="3" GridPane.rowIndex="5">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="4" GridPane.rowIndex="5">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="56.0" styleClass="btt_gridpane_6X6" stylesheets="@../style.css" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     </font>
+                  </Button>
+                  <Button id="btt" mnemonicParsing="false" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" stylesheets="@../css/style.css" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="5" GridPane.rowIndex="5">
                      <font>
                         <Font name="Snap ITC" size="24.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                </children>
             </GridPane>
          </children>

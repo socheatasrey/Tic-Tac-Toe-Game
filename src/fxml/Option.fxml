@@ -3,35 +3,56 @@
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OptionController">
-    <AnchorPane prefHeight="750.0" prefWidth="360.0" style="-fx-background-color: white;" styleClass="bg_image">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
-         <Button fx:id="button_profile" layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_profile_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_profile" stylesheets="@../css/style.css" text="👤" textFill="#2d3d2d">
+         <ImageView fitHeight="619.0" fitWidth="385.0" layoutX="6.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../resources/images/frame_bg.png" />
+            </image>
+         </ImageView>
+         <Button fx:id="button_profile" layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_profile_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_profile" stylesheets="@../css/style.css" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/profile.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
-         <Label layoutX="120.0" layoutY="167.0" text="OPtION" textFill="#2d3d2d">
+         <Label layoutX="117.0" layoutY="197.0" text="OPtION" textFill="#2d3d2d">
             <font>
-               <Font name="Showcard Gothic" size="36.0" />
+               <Font name="Copperplate Gothic Bold" size="36.0" />
             </font>
          </Label>
-         <Button layoutX="78.0" layoutY="297.0" mnemonicParsing="false" onAction="#bttn_3x3_option" prefHeight="78.0" prefWidth="204.0" styleClass="btt_start" stylesheets="@../css/style.css" text="3 x 3" textFill="#2d3d2d">
+         <Button layoutX="105.0" layoutY="294.0" mnemonicParsing="false" onAction="#bttn_3x3_option" prefHeight="50.0" prefWidth="150.0" styleClass="btt_login" stylesheets="@../css/style.css" text="3 x 3" textFill="#2d3d2d">
             <font>
-               <Font name="Showcard Gothic" size="36.0" />
+               <Font name="Copperplate Gothic Light" size="36.0" />
             </font>
          </Button>
-         <Button fx:id="button_setting" layoutX="270.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_setting_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_settings" stylesheets="@../css/style.css" text="⚙" textFill="#2d3d2d">
+         <Button fx:id="button_setting" layoutX="270.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_setting_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_settings" stylesheets="@../css/style.css" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/setting.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
-         <Button layoutX="78.0" layoutY="430.0" mnemonicParsing="false" onAction="#bttn_6x6_option" prefHeight="78.0" prefWidth="204.0" styleClass="btt_start" stylesheets="@../css/style.css" text="6 x6 " textFill="#2d3d2d">
+         <Button layoutX="105.0" layoutY="411.0" mnemonicParsing="false" onAction="#bttn_6x6_option" prefHeight="50.0" prefWidth="150.0" styleClass="btt_login" stylesheets="@../css/style.css" text="6 x 6 " textFill="#2d3d2d">
             <font>
-               <Font name="Showcard Gothic" size="36.0" />
+               <Font name="Copperplate Gothic Light" size="36.0" />
             </font>
          </Button>
       </children></AnchorPane>
