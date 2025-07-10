@@ -18,7 +18,7 @@
                <Image url="@../resources/images/bg/bg_profile.jpg" />
             </image>
          </ImageView>
-         <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_back_to_home" prefHeight="51.0" prefWidth="57.0" styleClass="btt_return" text="⬅">
+         <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_back_to_home" prefHeight="50.0" prefWidth="60.0" styleClass="btt_return">
             <font>
                <Font size="24.0" />
             </font>
@@ -30,63 +30,70 @@
                </ImageView>
             </graphic>
          </Button>
-         <Label layoutX="123.0" layoutY="97.0" text="Profile">
+         <Label layoutX="117.0" layoutY="101.0" text="Profile">
             <font>
-               <Font name="Copperplate Gothic Bold" size="25.0" />
+               <Font name="Copperplate Gothic Bold" size="24.0" />
             </font>
          </Label>
-         <Label layoutX="86.0" layoutY="158.0" text="Name:">
+         <Label layoutX="88.0" layoutY="150.0" text="Name:">
             <font>
-               <Font name="Comic Sans MS Bold" size="14.0" />
+               <Font name="Comic Sans MS Bold" size="18.0" />
             </font></Label>
-         <Label layoutX="86.0" layoutY="205.0" text="ID:">
+         <Label layoutX="88.0" layoutY="200.0" text="ID:">
             <font>
-               <Font name="Comic Sans MS Bold" size="14.0" />
+               <Font name="Comic Sans MS Bold" size="18.0" />
             </font></Label>
-         <Label layoutX="67.0" layoutY="244.0" text="National:">
+         <Label layoutX="88.0" layoutY="250.0" text="National:">
             <font>
-               <Font name="Comic Sans MS Bold" size="14.0" />
+               <Font name="Comic Sans MS Bold" size="18.0" />
             </font></Label>
          <Label layoutX="16.0" layoutY="324.0" text="History">
             <font>
                <Font name="Comic Sans MS Bold" size="18.0" />
             </font></Label>
-         <Button layoutX="240.0" layoutY="154.0" mnemonicParsing="false" onAction="#editName" styleClass="btt_edit" text="Edit">
+         <Button layoutX="270.0" layoutY="147.0" mnemonicParsing="false" onAction="#editName" styleClass="btt_edit" text="Edit">
             <font>
                <Font name="Comic Sans MS" size="12.0" />
             </font>
          </Button>
-         <ImageView fx:id="edit_profile" fitHeight="108.0" fitWidth="77.0" layoutX="3.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="edit_profile" fitHeight="53.0" fitWidth="53.0" layoutX="14.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../resources/images/profile_imgs/default.png" />
             </image>
          </ImageView>
-         <Label fx:id="lbl_name" layoutX="158.0" layoutY="158.0" text="Name">
+         <Label fx:id="lbl_name" layoutX="175.0" layoutY="150.0" text="Name">
             <font>
-               <Font name="Comic Sans MS Bold" size="14.0" />
+               <Font name="Comic Sans MS Bold" size="18.0" />
             </font>
          </Label>
-         <Label fx:id="lbl_ID" layoutX="155.0" layoutY="205.0" text="ID">
+         <Label fx:id="lbl_ID" layoutX="175.0" layoutY="200.0" text="ID">
             <font>
-               <Font name="Comic Sans MS Bold" size="14.0" />
+               <Font name="Comic Sans MS Bold" size="18.0" />
             </font>
          </Label>
-         <Label fx:id="lbl_nationality" layoutX="148.0" layoutY="244.0" text="Cambodia">
+         <Label fx:id="lbl_nationality" layoutX="175.0" layoutY="250.0" text="Cambodia">
             <font>
-               <Font name="Comic Sans MS Bold" size="14.0" />
+               <Font name="Comic Sans MS Bold" size="18.0" />
             </font>
          </Label>
-         <Button layoutX="249.0" layoutY="240.0" mnemonicParsing="false" onAction="#editNationality" styleClass="btt_edit" text="Edit">
+         <Button layoutX="270.0" layoutY="247.0" mnemonicParsing="false" onAction="#editNationality" styleClass="btt_edit" text="Edit">
             <font>
                <Font name="Comic Sans MS" size="12.0" />
             </font>
          </Button>
-         <Button layoutX="63.0" layoutY="126.0" mnemonicParsing="false" onAction="#changeProfilePicture" prefHeight="30.0" prefWidth="23.0" styleClass="btt_edit" text="+">
+         <Button layoutX="56.0" layoutY="169.0" mnemonicParsing="false" onAction="#changeProfilePicture" prefHeight="10.0" prefWidth="20.0" style="-fx-background-radius: 75;" styleClass="btt_edit" text="+">
             <font>
                <Font name="Comic Sans MS" size="12.0" />
             </font>
          </Button>
-         <Button layoutX="297.0" layoutY="27.0" mnemonicParsing="false" onAction="#bttn_to_go_achivement_action" text="Medal" />
+         <Button layoutX="290.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_to_go_achivement_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_return">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/medal.png" />
+                  </image>
+               </ImageView>
+            </graphic></Button>
          <ScrollPane fx:id="scrollpane_history" layoutX="11.0" layoutY="357.0" prefHeight="383.0" prefWidth="338.0" styleClass="btt_history">
             <content>
                <VBox fx:id="historyContainer" prefHeight="200.0" prefWidth="100.0" />
