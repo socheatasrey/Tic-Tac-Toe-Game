@@ -20,11 +20,11 @@
             <image>
                <Image url="@../resources/images/bg/jghfd.jpg" />
             </image></ImageView>
-         <Label layoutX="54.0" layoutY="146.0" text="Player1">
-            <font><Font name="Lucida Console" size="20.0" /></font>
+         <Label layoutX="52.0" layoutY="141.0" text="Player1">
+            <font><Font name="Comic Sans MS" size="28.0" /></font>
          </Label>
-         <Label layoutX="228.0" layoutY="145.0" text="Player2">
-            <font><Font name="Lucida Console" size="20.0" /></font>
+         <Label layoutX="219.0" layoutY="141.0" text="Player2">
+            <font><Font name="Comic Sans MS" size="28.0" /></font>
          </Label>
          <Label layoutX="75.0" layoutY="75.0" text="O">
             <font><Font name="Snap ITC" size="50.0" /></font>
@@ -32,35 +32,67 @@
          <Label layoutX="245.0" layoutY="75.0" text="X">
             <font><Font name="Snap ITC" size="50.0" /></font>
          </Label>
-         <Label layoutX="158.0" layoutY="90.0" text="VS">
-            <font><Font name="Showcard Gothic" size="36.0" /></font>
+         <Label layoutX="157.0" layoutY="82.0" text="VS">
+            <font><Font name="Comic Sans MS Bold" size="36.0" /></font>
          </Label>
 
          <!-- ✅ ADDED winnerText here -->
-         <Text fx:id="winnerText" layoutX="105.0" layoutY="235.0" text="Tic-Tac-Toe">
+         <Text fx:id="winnerText" layoutX="87.0" layoutY="68.0" text="Tic-Tac-Toe">
             <font><Font name="Snap ITC" size="28.0" /></font>
          </Text>
 
-         <Label layoutX="17.0" layoutY="205.0" text="O O O">
+         <Label layoutX="13.0" layoutY="207.0" text="O O O">
             <font><Font name="Snap ITC" size="24.0" /></font>
          </Label>
 
-         <StackPane layoutX="104.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
+         <StackPane layoutX="106.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
             <children>
-               <Button fx:id="button_concrede" mnemonicParsing="false" onAction="#button_concrede_on_action" prefHeight="51.0" prefWidth="56.0" styleClass="btt_concede" text="🏁">
+               <Button fx:id="button_concrede" mnemonicParsing="false" onAction="#button_concrede_on_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_concede">
                   <font><Font size="24.0" /></font>
+                  <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/concede.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Button>
+               <Label text="Concede" StackPane.alignment="BOTTOM_CENTER">
+                  <font>
+                     <Font name="Comic Sans MS" size="14.0" />
+                  </font>
+               </Label>
             </children>
          </StackPane>
-         <StackPane layoutX="180.0" layoutY="610.0" prefHeight="81.0" prefWidth="73.0">
+         <StackPane layoutX="182.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
             <children>
-               <Button fx:id="button_redo" mnemonicParsing="false" onAction="#button_redo_on_action" prefHeight="50.0" prefWidth="50.0" styleClass="btt_redo" text="⬅">
+               <Button fx:id="button_redo" mnemonicParsing="false" onAction="#button_redo_on_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_redo">
                   <font><Font name="System Bold" size="21.0" /></font>
+                  <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/redo.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Button>
+      
+               <Label text="Re-do" StackPane.alignment="BOTTOM_CENTER">
+                  <font>
+                     <Font name="Comic Sans MS" size="14.0" />
+                  </font>
+               </Label>
             </children>
          </StackPane>
-         <Button fx:id="button_pause" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#button_pause_on_action" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 25;" styleClass="btt_stop" text="⏸">
+         <Button fx:id="button_pause" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#button_pause_on_action" prefHeight="50.0" prefWidth="50.0" styleClass="btt_stop" stylesheets="@../css/style.css">
             <font><Font size="18.0" /></font>
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/pause.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
 
          <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="13.0" layoutY="250.0" prefHeight="335.0" prefWidth="335.0" styleClass="btt_gridpane_3x3">
@@ -88,13 +120,6 @@
                <Button fx:id="button_2x2" prefHeight="119.0" prefWidth="115.0" styleClass="btt_gridpane_3X3" GridPane.columnIndex="2" GridPane.rowIndex="2"><font><Font name="Snap ITC" size="50.0" /></font></Button>
            </children>
          </GridPane>
-
-         <Label layoutX="197.0" layoutY="681.0" text="Re-do">
-            <font><Font name="Showcard Gothic" size="13.0" /></font>
-         </Label>
-         <Label layoutX="112.0" layoutY="681.0" text="Concede">
-            <font><Font name="Showcard Gothic" size="13.0" /></font>
-         </Label>
       </children>
    </AnchorPane>
 </Scene>

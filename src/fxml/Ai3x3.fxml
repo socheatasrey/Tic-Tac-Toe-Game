@@ -21,7 +21,7 @@
                   <Image url="@../resources/images/bg/jghfd.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="54.0" layoutY="146.0" text="Player1">
+            <Label layoutX="63.0" layoutY="141.0" text="Player1">
                <font>
                   <Font name="Comic Sans MS" size="20.0" />
                </font>
@@ -41,19 +41,19 @@
                   <Font name="Snap ITC" size="50.0" />
                </font>
             </Label>
-            <Label layoutX="156.0" layoutY="82.0" text="VS">
+            <Label layoutX="157.0" layoutY="82.0" text="VS">
                <font>
                   <Font name="Comic Sans MS Bold" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="13.0" layoutY="189.0" text="O O O">
+            <Label layoutX="13.0" layoutY="207.0" text="O O O">
                <font>
                   <Font name="Snap ITC" size="24.0" />
                </font>
             </Label>
             <StackPane layoutX="106.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
                <children>
-                  <Button fx:id="Concede_button" mnemonicParsing="false" onAction="#Concede_button_action" prefHeight="51.0" prefWidth="57.0" styleClass="btt_concede" text="🏁">
+                  <Button fx:id="Concede_button" mnemonicParsing="false" onAction="#Concede_button_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_concede">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -74,7 +74,7 @@
             </StackPane>
             <StackPane layoutX="182.0" layoutY="583.0" prefHeight="90.0" prefWidth="70.0">
                <children>
-                  <Button fx:id="Redo_button" mnemonicParsing="false" onAction="#Redo_button_action" prefHeight="50.0" prefWidth="50.0" styleClass="btt_redo" text="⬅">
+                  <Button fx:id="Redo_button" mnemonicParsing="false" onAction="#Redo_button_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_redo">
                      <font>
                         <Font name="System Bold" size="21.0" />
                      </font>
@@ -93,7 +93,7 @@
                   </Label>
                </children>
             </StackPane>
-            <Button fx:id="bttn_pause" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_pause_action" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 25;" styleClass="btt_stop" text="⏸">
+            <Button fx:id="bttn_pause" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#bttn_pause_action" prefHeight="50.0" prefWidth="50.0" styleClass="btt_stop">
                <font>
                   <Font size="18.0" />
                </font>
@@ -117,12 +117,12 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button id="btt" fx:id="button_play1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#button_play1_action" prefHeight="137.0" prefWidth="123.0" styleClass="btt_gridpane_3X3" text="O" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.halignment="CENTER">
+                  <Button id="btt" fx:id="button_play1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#button_play1_action" prefHeight="137.0" prefWidth="123.0" styleClass="btt_gridpane_3X3" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Snap ITC" size="50.0" />
                      </font>
                   </Button>
-                  <Button id="btt" fx:id="button_play2" mnemonicParsing="false" onAction="#button_play2_action" prefHeight="156.0" prefWidth="129.0" styleClass="btt_gridpane_3X3" text="X" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                  <Button id="btt" fx:id="button_play2" mnemonicParsing="false" onAction="#button_play2_action" prefHeight="156.0" prefWidth="129.0" styleClass="btt_gridpane_3X3" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Snap ITC" size="50.0" />
                      </font>
@@ -137,7 +137,7 @@
                         <Font name="Snap ITC" size="50.0" />
                      </font>
                   </Button>
-                  <Button id="btt" fx:id="button_play5" mnemonicParsing="false" onAction="#button_play5_action" prefHeight="131.0" prefWidth="124.0" styleClass="btt_gridpane_3X3" text="O" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Button id="btt" fx:id="button_play5" mnemonicParsing="false" onAction="#button_play5_action" prefHeight="131.0" prefWidth="124.0" styleClass="btt_gridpane_3X3" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font name="Snap ITC" size="50.0" />
                      </font>
