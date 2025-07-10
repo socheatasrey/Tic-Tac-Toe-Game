@@ -7,8 +7,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import util.CurrentTempUtil;
 
 import java.net.URL;
 import java.util.Arrays;
@@ -28,6 +30,17 @@ public class PVP3x3Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        TextInputDialog dialog = new TextInputDialog("Player 2");
+        dialog.setTitle("Enter Opponent Name");
+        dialog.setHeaderText("Player vs Player");
+        dialog.setContentText("Enter Player 2's name:");
+
+        dialog.showAndWait().ifPresent(opponentName -> {
+            CurrentTempUtil.currentProgress.setOpponetName(opponentName);
+        });
+
+        CurrentTempUtil.printCurrentProgress();
         buttons = Arrays.asList(
             button_0x0, button_0x1, button_0x2,
             button_1x0, button_1x1, button_1x2,
@@ -94,9 +107,9 @@ public class PVP3x3Controller implements Initializable {
         }
 
         if (winner != null) {
-            goToResultScene(winner + " WON!");
+            goToResultScene("WON");
         } else if (buttons.stream().allMatch(b -> !b.getText().isEmpty())) {
-            goToResultScene("DRAW!");
+            goToResultScene("DRAW");
         }
     }
 
@@ -112,7 +125,7 @@ public class PVP3x3Controller implements Initializable {
 
     @FXML
     void button_concrede_on_action(ActionEvent event) {
-        goToResultScene("CONCEDE!");
+        goToResultScene("CONCEDE");
     }
 
     @FXML

@@ -8,20 +8,26 @@ import java.util.Optional;
 
 public class UserDAO {
 
-    // ✅ Register a new user
     public boolean registerUser(User user) {
         String sql = "INSERT INTO users (username, password, profile_path, nationality) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = DBConnection.connect();
-             PreparedStatement ps = conn.prepareStatement(sql)) {
+            PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             ps.setString(1, user.getUsername());
-            ps.setString(2, user.getPassword()); // already hashed if needed
+            ps.setString(2, user.getPassword()); // assume already hashed
             ps.setString(3, user.getPhotoPath());
             ps.setString(4, user.getNationality());
 
             int rows = ps.executeUpdate();
-            return rows > 0;
+            if (rows > 0) {
+                ResultSet rs = ps.getGeneratedKeys();
+                if (rs.next()) {
+                    int generatedId = rs.getInt(1);
+                    user.setId(generatedId); // ✅ Now the user has an ID!
+                }
+                return true;
+            }
 
         } catch (SQLIntegrityConstraintViolationException e) {
             System.err.println("Username already exists.");
@@ -31,6 +37,7 @@ public class UserDAO {
 
         return false;
     }
+
 
     // ✅ Login a user and return User object if credentials match
     public Optional<User> loginUser(String username, String password) {
@@ -101,7 +108,7 @@ public class UserDAO {
         }
     }
 
-    public void updatePhotoPath(int userId, String path) {
+    public static void updatePhotoPath(int userId, String path) {
         try (Connection conn = DBConnection.connect();
             PreparedStatement ps = conn.prepareStatement("UPDATE users SET profile_path = ? WHERE user_id = ?")) {
             ps.setString(1, path);

@@ -14,6 +14,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.User;
+import util.CurrentTempUtil;
 import util.SoundUtil;
 
 public class LoginController {
@@ -74,6 +75,7 @@ public class LoginController {
         Optional<User> user = userDAO.loginUser(username, password); 
 
         if (user.isPresent()) {
+            CurrentTempUtil.currentUser = user.get();
             lbl_login_status.setText("Login successful!");
 
             SoundUtil.loopMusic("Music_Background.wav");

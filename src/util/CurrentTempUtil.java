@@ -8,7 +8,7 @@ import model.User;
 
 public class CurrentTempUtil {
     public static User currentUser;
-    public static GameHistoryEntry currentProgress;
+    public static GameHistoryEntry currentProgress ;
 
 
     public static String getResourcePath(String relativeResourcePath) {
@@ -29,6 +29,11 @@ public class CurrentTempUtil {
         currentUser = null;
         currentProgress = null;
     }
+    public static void printCurrentProgress() {
+        System.out.println("Current GameType: " + CurrentTempUtil.currentProgress.getGameType());
+        System.out.println("OpponentName: " + CurrentTempUtil.currentProgress.getOpponentName());
+    }
+
 
     
 }

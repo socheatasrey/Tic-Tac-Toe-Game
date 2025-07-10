@@ -9,6 +9,27 @@ import java.util.List;
 
 public class GameHistoryDAO {
 
+     public static boolean saveGameHistory(GameHistoryEntry entry) {
+        String sql = "INSERT INTO games (user_id, opponent_name, type, game_status, timestamp) VALUES (?, ?, ?, ?, ?)";
+
+        try (Connection conn = DBConnection.connect();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setInt(1, entry.getUserID());
+            ps.setString(2, entry.getOpponentName());
+            ps.setString(3, entry.getGameType());
+            ps.setString(4, entry.getGameStatus());
+            ps.setString(5, entry.getTimestamp().toString());
+
+            return ps.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
     public List<GameHistoryEntry> getHistoryByUserId(int userId) {
         List<GameHistoryEntry> history = new ArrayList<>();
         String sql = "SELECT * FROM games WHERE user_id = ? ORDER BY timestamp DESC";

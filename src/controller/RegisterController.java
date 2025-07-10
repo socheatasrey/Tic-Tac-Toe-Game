@@ -83,7 +83,7 @@ public class RegisterController {
                                 passwordfield_verify_register.getText();
 
         // Create user object for validation
-        User user = new User(username, password, "/resources/"); // No photo yet
+        User user = new User(username, password, "src/resources/images/profile_imgs/default.png");
 
         String validationError = user.validateRegistration(confirmPassword);
         if (validationError != null) {
@@ -106,6 +106,7 @@ public class RegisterController {
         boolean success = userDAO.registerUser(user);
 
         if (success) {
+            CurrentTempUtil.currentUser = user;
             lbl_register_status.setText("Registration successful!");
             lbl_register_status.setStyle("-fx-text-fill: green;");
             

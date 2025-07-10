@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import util.CurrentTempUtil;
 import util.SoundUtil;
 
 public class Option3x3Controller {
@@ -15,6 +16,9 @@ public class Option3x3Controller {
 
     @FXML
     void bttn_ai_3x3_play(ActionEvent event) {
+        CurrentTempUtil.currentProgress.setOpponetName("AI");
+
+        System.out.println("Game type: " + CurrentTempUtil.currentProgress.getGameType());
         SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();
@@ -44,6 +48,7 @@ public class Option3x3Controller {
 
     @FXML
     void bttn_pvp_play(ActionEvent event) {
+        System.out.println("Game type: " + CurrentTempUtil.currentProgress.getGameType());
         SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();

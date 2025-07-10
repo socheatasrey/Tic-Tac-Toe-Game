@@ -6,19 +6,22 @@ public class User {
     private String photoPath;
     private String nationality;
 
+    public User(){
+        
+    }
 
     public User(String username , String password,String photopath){
         this.username = username;
         this.password = password;
         this.photoPath = photopath;
-        this.nationality = "Cambodian";
+        this.nationality = "Unknown";
     }
     public User(int id, String username, String password, String photoPath) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.photoPath = photoPath;
-        this.nationality = "Cambodian";
+        this.nationality = "Unknown";
     }
 
     //user

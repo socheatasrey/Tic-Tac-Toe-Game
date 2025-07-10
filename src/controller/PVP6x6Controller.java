@@ -7,7 +7,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
+import model.GameHistoryEntry;
+import util.CurrentTempUtil;
+import util.currentTempUtil;
 
 import java.net.URL;
 import java.util.Arrays;
@@ -32,6 +36,17 @@ public class PVP6x6Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        TextInputDialog dialog = new TextInputDialog("Player 2");
+        dialog.setTitle("Enter Opponent Name");
+        dialog.setHeaderText("Player vs Player");
+        dialog.setContentText("Enter Player 2's name:");
+
+        dialog.showAndWait().ifPresent(opponentName -> {
+            CurrentTempUtil.currentProgress.setOpponetName(opponentName);
+        });
+
+        CurrentTempUtil.currentProgress.toString();
         buttons = Arrays.asList(
             button_0x0, button_0x1, button_0x2, button_0x3, button_0x4, button_0x5,
             button_1x0, button_1x1, button_1x2, button_1x3, button_1x4, button_1x5,
@@ -111,15 +126,15 @@ public class PVP6x6Controller implements Initializable {
         }
 
         if (winner != null) {
-            goToResultScene(winner + " WON!");
+            goToResultScene("WON");
         } else if (buttons.stream().allMatch(b -> !b.getText().isEmpty())) {
-            goToResultScene("DRAW!");
+            goToResultScene("DRAW");
         }
     }
 
     @FXML
     void button_concede_on_action(ActionEvent event) {
-        goToResultScene("CONCEDE!");
+        goToResultScene("CONCEDE");
     }
 
     @FXML

@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import model.GameHistoryEntry;
+import util.CurrentTempUtil;
 import util.SoundUtil;
 
 public class Option6x6Controller {
@@ -15,6 +17,8 @@ public class Option6x6Controller {
 
     @FXML
     void bttn_6x6_ai(ActionEvent event) {
+        CurrentTempUtil.currentProgress = new GameHistoryEntry();
+        CurrentTempUtil.currentProgress.setOpponetName("AI");
         SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();

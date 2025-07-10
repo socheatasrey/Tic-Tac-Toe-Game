@@ -15,10 +15,14 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.GameHistoryEntry;
 import model.User;
+import util.CurrentTempUtil;
 import util.SoundUtil;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.*;
 
 public class ProfileController implements Initializable {
@@ -34,7 +38,7 @@ public class ProfileController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        currentUser = userDAO.getUserById(1);  
+        currentUser = userDAO.getUserById(CurrentTempUtil.currentUser.getId());  
 
         displayUserInfo();
         loadHistory();
@@ -45,6 +49,8 @@ public class ProfileController implements Initializable {
         lbl_name.setText(currentUser.getUsername());
         lbl_ID.setText(String.valueOf(currentUser.getId()));
         lbl_nationality.setText(currentUser.getNationality());
+        edit_profile.setImage(new Image(CurrentTempUtil.getResourcePath(CurrentTempUtil.currentUser.getPhotoPath())));
+
     }
 
     @FXML
@@ -83,11 +89,50 @@ public class ProfileController implements Initializable {
 
         File file = fileChooser.showOpenDialog(lbl_name.getScene().getWindow());
         if (file != null) {
-            String path = file.toURI().toString();
-            edit_profile.setImage(new Image(path));
-            currentUser.setPhotoPath(path);
-            userDAO.updatePhotoPath(currentUser.getId(), path);
+            try {
+                String username = CurrentTempUtil.currentUser.getUsername();
+                String extension = getFileExtension(file.getName());
+                if (extension == null) {
+                    showAlert("Invalid image file.");
+                    return;
+                }
+
+                String newFilename = "src/resources/images/profile_imgs/" + username + "_photo." + extension;
+                
+                File destFile = new File(newFilename);
+                
+                // Copy selected file to project directory
+                Files.copy(file.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+
+                // Update image path (relative for GameSettings)
+                String resourcePath = CurrentTempUtil.getResourcePath(newFilename);
+
+                // Set user info
+                CurrentTempUtil.currentUser.setPhotoPath(newFilename);
+                edit_profile.setImage(new Image(resourcePath));
+
+                // Save to DB
+                int currentId = CurrentTempUtil.currentUser.getId();
+                UserDAO.updatePhotoPath(currentId, newFilename);
+            } catch (IOException e) {
+                showAlert("Failed to upload image: " + e.getMessage());
+                e.printStackTrace();
+            }
         }
+    }
+    private String getFileExtension(String filename) {
+        int dotIndex = filename.lastIndexOf('.');
+        if (dotIndex > 0 && dotIndex < filename.length() - 1) {
+            return filename.substring(dotIndex + 1).toLowerCase();
+        }
+        return null;
+    }
+
+    private void showAlert(String msg) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Invalid Input");
+        alert.setContentText(msg);
+        alert.showAndWait();
     }
 
     private void loadHistory() {

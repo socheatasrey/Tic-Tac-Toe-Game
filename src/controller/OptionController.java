@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import model.GameHistoryEntry;
+import util.CurrentTempUtil;
 import util.SoundUtil;
 
 public class OptionController {
@@ -18,6 +20,8 @@ public class OptionController {
 
     @FXML
     void bttn_3x3_option(ActionEvent event) {
+        CurrentTempUtil.currentProgress = new GameHistoryEntry();
+        CurrentTempUtil.currentProgress.setGameType("3x3");
         SoundUtil.clik();
         try {
             Stage stage = (Stage) button_profile.getScene().getWindow();
@@ -32,6 +36,8 @@ public class OptionController {
 
     @FXML
     void bttn_6x6_option(ActionEvent event) {
+        CurrentTempUtil.currentProgress = new GameHistoryEntry();
+        CurrentTempUtil.currentProgress.setGameType("6x6");
         SoundUtil.clik();
         try {
             Stage stage = (Stage) button_profile.getScene().getWindow();
