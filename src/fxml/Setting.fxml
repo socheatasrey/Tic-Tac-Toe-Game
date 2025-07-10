@@ -11,11 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingController">
-<<<<<<< HEAD
     <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
-=======
-    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../style.css">
->>>>>>> origin/main
       <children>
          <ImageView fitHeight="619.0" fitWidth="385.0" layoutX="6.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
             <image>

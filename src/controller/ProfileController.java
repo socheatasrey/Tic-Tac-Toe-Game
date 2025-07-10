@@ -2,13 +2,17 @@ package controller;
 
 import dao.UserDAO;
 import dao.GameHistoryDAO;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import model.GameHistoryEntry;
 import model.User;
 
@@ -43,7 +47,7 @@ public class ProfileController implements Initializable {
     }
 
     @FXML
-    void editName() {
+    void editName(ActionEvent event) {
         TextInputDialog dialog = new TextInputDialog(currentUser.getUsername());
         dialog.setHeaderText("Edit Name");
         dialog.showAndWait().ifPresent(newName -> {
@@ -54,7 +58,7 @@ public class ProfileController implements Initializable {
     }
 
     @FXML
-    void editNationality() {
+    void editNationality(ActionEvent event) {
         List<String> countries = Arrays.asList("Cambodia", "Thailand", "Vietnam", "USA", "France");
         ChoiceDialog<String> dialog = new ChoiceDialog<>(currentUser.getNationality(), countries);
         dialog.setHeaderText("Edit Nationality");
@@ -103,6 +107,29 @@ public class ProfileController implements Initializable {
 
             row.getChildren().addAll(opponent, type, result, time);
             historyContainer.getChildren().add(row);
+        }
+    }
+    @FXML
+    void bttn_to_go_achivement_action(ActionEvent event){
+        try {
+            Stage stage = (Stage) lbl_ID.getScene().getWindow();
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Achievement.fxml"));
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void bttn_back_to_home(ActionEvent event){
+        try {
+            Stage stage = (Stage) lbl_ID.getScene().getWindow();
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
