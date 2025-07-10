@@ -18,20 +18,34 @@
                <Image url="@../resources/images/bg_profile.jpg" />
             </image>
          </ImageView>
-         <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="57.0" styleClass="btt_return" text="⬅">
+         <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" styleClass="btt_return">
             <font>
                <Font size="24.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/return.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
          <Label layoutX="123.0" layoutY="97.0" text="Profile">
             <font>
-               <Font name="Showcard Gothic" size="25.0" />
+               <Font name="Copperplate Gothic Bold" size="25.0" />
             </font>
          </Label>
-         <Button layoutX="18.0" layoutY="144.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 70;" styleClass="btt_profile" text="👤">
+         <Button layoutX="19.0" layoutY="144.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="52.0" style="-fx-background-radius: 70;" styleClass="btt_profile">
             <font>
                <Font size="25.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/profile.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
          <Label layoutX="86.0" layoutY="158.0" text="Name:">
             <font>
@@ -58,5 +72,13 @@
             </font>
          </Button>
          <ScrollPane layoutX="11.0" layoutY="357.0" prefHeight="383.0" prefWidth="338.0" styleClass="btt_history" />
+         <Button layoutX="290.0" layoutY="13.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="57.0" styleClass="btt_profile">
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/medal.png" />
+                  </image></ImageView>
+            </graphic>
+         </Button>
       </children></AnchorPane>
 </Scene>

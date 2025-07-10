@@ -13,64 +13,99 @@
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PauseController">
     <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
-         <ImageView fitHeight="497.0" fitWidth="340.0" layoutX="10.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="619.0" fitWidth="385.0" layoutX="5.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../resources/images/pause_bg.jpg" />
+               <Image url="@../resources/images/frame_bg.png" />
             </image>
          </ImageView>
-         <Label layoutX="107.0" layoutY="150.0" text="Pause">
+         <Label layoutX="111.0" layoutY="154.0" prefHeight="42.0" prefWidth="169.0" text="Pause">
             <font>
-               <Font name="Showcard Gothic" size="48.0" />
+               <Font name="Copperplate Gothic Bold" size="45.0" />
             </font>
          </Label>
-         <HBox alignment="CENTER" layoutY="205.0" prefHeight="62.0" prefWidth="360.0" spacing="30.0">
+         <HBox alignment="CENTER" layoutX="-1.0" layoutY="225.0" prefHeight="62.0" prefWidth="360.0" spacing="30.0">
             <children>
-               <Label prefHeight="74.0" prefWidth="94.0" text="  🔊">
+               <Label alignment="CENTER" prefHeight="74.0" prefWidth="94.0">
                   <font>
                      <Font name="Showcard Gothic" size="64.0" />
                   </font>
+                  <graphic>
+                     <ImageView fitHeight="50.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/music.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Label>
-               <ToggleButton fx:id="togglebutton_sound" mnemonicParsing="false" onAction="#togglebutton_sound_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_on" text="ON">
+               <ToggleButton fx:id="togglebutton_sound" mnemonicParsing="false" onAction="#togglebutton_sound_action" prefHeight="30.0" prefWidth="70.0" styleClass="btt_on" text="ON">
                   <font>
-                     <Font name="Showcard Gothic" size="24.0" />
+                     <Font name="Comic Sans MS" size="18.0" />
                   </font>
                </ToggleButton>
             </children>
          </HBox>
-         <HBox alignment="CENTER" layoutY="285.0" prefHeight="68.0" prefWidth="360.0" spacing="30.0">
+         <HBox alignment="CENTER" layoutX="-1.0" layoutY="305.0" prefHeight="68.0" prefWidth="360.0" spacing="30.0">
             <children>
-               <Label prefHeight="74.0" prefWidth="98.0" text=" 🎵">
+               <Label alignment="CENTER" prefHeight="74.0" prefWidth="98.0">
                   <font>
                      <Font name="Showcard Gothic" size="64.0" />
                   </font>
+                  <graphic>
+                     <ImageView fitHeight="50.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/sound.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Label>
-               <ToggleButton fx:id="togglebutton_music" mnemonicParsing="false" onAction="#togglebutton_music_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_on" text="ON">
+               <ToggleButton fx:id="togglebutton_music" mnemonicParsing="false" onAction="#togglebutton_music_action" prefHeight="30.0" prefWidth="70.0" styleClass="btt_on" text="ON">
                   <font>
-                     <Font name="Showcard Gothic" size="24.0" />
+                     <Font name="Comic Sans MS" size="18.0" />
                   </font>
                </ToggleButton>
             </children>
          </HBox>
-         <HBox alignment="CENTER" layoutY="445.0" prefHeight="60.0" prefWidth="360.0" spacing="60.0">
+         <HBox alignment="CENTER" layoutX="-1.0" layoutY="465.0" prefHeight="60.0" prefWidth="360.0" spacing="60.0">
             <children>
-               <Button fx:id="button_continue" minHeight="50.0" mnemonicParsing="false" onAction="#button_continue_action" prefWidth="100.0" styleClass="btt_continue" text="&gt;&gt;">
+               <Button fx:id="button_continue" minHeight="50.0" mnemonicParsing="false" onAction="#button_continue_action" prefWidth="100.0" styleClass="btt_continue">
                   <font>
                      <Font name="Showcard Gothic" size="36.0" />
                   </font>
+                  <graphic>
+                     <ImageView fitHeight="40.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/continue.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Button>
             </children>
          </HBox>
-         <HBox alignment="CENTER" layoutY="365.0" prefHeight="46.0" prefWidth="360.0" spacing="30.0">
+         <HBox alignment="CENTER" layoutX="-1.0" layoutY="385.0" prefHeight="57.0" prefWidth="360.0" spacing="30.0">
             <children>
-               <Button fx:id="button_home" mnemonicParsing="false" onAction="#button_home_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_home" text="🏠">
+               <Button fx:id="button_home" mnemonicParsing="false" onAction="#button_home_action" prefHeight="30.0" prefWidth="100.0" styleClass="btt_home">
                   <font>
                      <Font name="Showcard Gothic" size="36.0" />
                   </font>
+                  <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/home.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Button>
-               <Button fx:id="button_playagain" mnemonicParsing="false" onAction="#button_playagain_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_playagain" text="🔁">
+               <Button fx:id="button_playagain" mnemonicParsing="false" onAction="#button_playagain_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_playagain">
                   <font>
                      <Font name="Showcard Gothic" size="36.0" />
                   </font>
+                  <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/back.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Button>
             </children>
          </HBox>

@@ -30,7 +30,7 @@ public class SettingController {
         try {
 
             Stage stage = (Stage) button_return.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("Home.fxml"));
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

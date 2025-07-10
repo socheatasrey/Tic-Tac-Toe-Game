@@ -11,30 +11,44 @@
 <Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
     <AnchorPane prefHeight="750.0" prefWidth="360.0" style="-fx-background-color: white;" styleClass="bg_image">
       <children>
-         <Button fx:id="button_profile" layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_profile_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_profile" stylesheets="@../css/style.css" text="👤" textFill="#2d3d2d">
+         <Button fx:id="button_profile" layoutX="30.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_profile_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_profile" stylesheets="@../css/style.css" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/profile.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
          <ImageView fitHeight="186.0" fitWidth="176.0" layoutX="92.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../resources/images/TicTacToe_logo.jpg" />
             </image>
          </ImageView>
-         <Label layoutX="84.0" layoutY="168.0" text="TICTACTOE" textFill="#2d3d2d">
+         <Label layoutX="63.0" layoutY="171.0" text="TICTACTOE" textFill="#2d3d2d">
             <font>
-               <Font name="Showcard Gothic" size="36.0" />
+               <Font name="Copperplate Gothic Bold" size="36.0" />
             </font>
          </Label>
          <Button fx:id="button_start" layoutX="78.0" layoutY="375.0" mnemonicParsing="false" onAction="#button_start_action" prefHeight="78.0" prefWidth="204.0" styleClass="btt_start" stylesheets="@../css/style.css" text="Start" textFill="#2d3d2d">
             <font>
-               <Font name="Showcard Gothic" size="36.0" />
+               <Font name="Copperplate Gothic Bold" size="36.0" />
             </font>
          </Button>
-         <Button fx:id="button_setting" layoutX="270.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_setting_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_settings" stylesheets="@../css/style.css" text="⚙" textFill="#2d3d2d">
+         <Button fx:id="button_setting" layoutX="270.0" layoutY="35.0" mnemonicParsing="false" onAction="#button_setting_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_settings" stylesheets="@../css/style.css" textFill="#2d3d2d">
             <font>
                <Font name="Showcard Gothic" size="24.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/setting.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
       </children></AnchorPane>
 </Scene>

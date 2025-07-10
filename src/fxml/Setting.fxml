@@ -10,48 +10,69 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingController">
-    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../style.css">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingController">
+    <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
-         <ImageView fitHeight="497.0" fitWidth="340.0" layoutX="10.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="619.0" fitWidth="385.0" layoutX="6.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@../../../../Downloads/frame-removebg-preview.png" />
+               <Image url="@../resources/images/frame_bg.png" />
             </image>
          </ImageView>
-         <Button fx:id="button_return" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#button_return_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_return" stylesheets="@../style.css" text="⬅">
+         <Button fx:id="button_return" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#button_return_action" prefHeight="50.0" prefWidth="60.0" styleClass="btt_return">
             <font>
                <Font size="24.0" />
             </font>
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../resources/images/return.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
-         <Label layoutX="93.0" layoutY="141.0" text="Setting">
+         <Label layoutX="105.0" layoutY="163.0" prefHeight="36.0" prefWidth="172.0" text="Setting">
             <font>
-               <Font name="Segoe Print" size="48.0" />
+               <Font name="Copperplate Gothic Bold" size="40.0" />
             </font>
          </Label>
-         <HBox alignment="CENTER_LEFT" layoutX="66.0" layoutY="237.0" prefHeight="100.0" prefWidth="250.0" spacing="50.0">
+         <HBox alignment="CENTER_LEFT" layoutX="85.0" layoutY="258.0" prefHeight="100.0" prefWidth="210.0" spacing="80.0">
             <children>
-               <Label lineSpacing="50.0" text="🔊">
+               <Label alignment="CENTER" lineSpacing="50.0">
                   <font>
                      <Font size="64.0" />
                   </font>
+                  <graphic>
+                     <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/music.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Label>
-               <ToggleButton fx:id="togglebutton_sound" minHeight="0.0" mnemonicParsing="false" onAction="#togglebutton_sound_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_on" stylesheets="@../style.css" text="ON">
+               <ToggleButton fx:id="togglebutton_sound" mnemonicParsing="false" onAction="#togglebutton_sound_action" prefHeight="30.0" prefWidth="70.0" styleClass="btt_on" text="ON">
                   <font>
-                     <Font name="Showcard Gothic" size="24.0" />
+                     <Font name="Comic Sans MS" size="18.0" />
                   </font>
                </ToggleButton>
             </children>
          </HBox>
-         <HBox alignment="CENTER_LEFT" layoutX="66.0" layoutY="352.0" prefHeight="100.0" prefWidth="250.0" spacing="50.0">
+         <HBox alignment="CENTER_LEFT" layoutX="85.0" layoutY="375.0" prefHeight="100.0" prefWidth="210.0" spacing="80.0">
             <children>
-               <Label text="🎵">
+               <Label alignment="CENTER">
                   <font>
                      <Font size="64.0" />
                   </font>
+                  <graphic>
+                     <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../resources/images/sound.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
                </Label>
-               <ToggleButton fx:id="togglebutton_music" minHeight="0.0" mnemonicParsing="false" onAction="#togglebutton_music_action" prefHeight="50.0" prefWidth="100.0" styleClass="btt_on" stylesheets="@../style.css" text="ON">
+               <ToggleButton fx:id="togglebutton_music" mnemonicParsing="false" onAction="#togglebutton_music_action" prefHeight="30.0" prefWidth="70.0" styleClass="btt_on" text="ON">
                   <font>
-                     <Font name="Showcard Gothic" size="24.0" />
+                     <Font name="Comic Sans MS" size="18.0" />
                   </font>
                </ToggleButton>
             </children>
