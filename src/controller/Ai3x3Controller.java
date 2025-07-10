@@ -2,8 +2,12 @@ package controller;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+import util.SoundUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +15,7 @@ import java.util.Random;
 
 public class Ai3x3Controller {
 
-    @FXML private Button Concede_button, Pause_button, Redo_button;
+    @FXML private Button Concede_button, bttn_pause, Redo_button;
     @FXML private Button button_play1, button_play2, button_play3;
     @FXML private Button button_play4, button_play5, button_play6;
     @FXML private Button button_play7, button_play8, button_play9;
@@ -173,27 +177,37 @@ public class Ai3x3Controller {
     }
 
     // Cell actions
-    @FXML void button_play1_action(ActionEvent e) { handlePlayerMove(0, button_play1); }
-    @FXML void button_play2_action(ActionEvent e) { handlePlayerMove(1, button_play2); }
-    @FXML void button_play3_action(ActionEvent e) { handlePlayerMove(2, button_play3); }
-    @FXML void button_play4_action(ActionEvent e) { handlePlayerMove(3, button_play4); }
-    @FXML void button_play5_action(ActionEvent e) { handlePlayerMove(4, button_play5); }
-    @FXML void button_play6_action(ActionEvent e) { handlePlayerMove(5, button_play6); }
-    @FXML void button_play7_action(ActionEvent e) { handlePlayerMove(6, button_play7); }
-    @FXML void button_play8_action(ActionEvent e) { handlePlayerMove(7, button_play8); }
-    @FXML void button_play9_action(ActionEvent e) { handlePlayerMove(8, button_play9); }
+    @FXML void button_play1_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(0, button_play1); }
+    @FXML void button_play2_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(1, button_play2); }
+    @FXML void button_play3_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(2, button_play3); }
+    @FXML void button_play4_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(3, button_play4); }
+    @FXML void button_play5_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(4, button_play5); }
+    @FXML void button_play6_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(5, button_play6); }
+    @FXML void button_play7_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(6, button_play7); }
+    @FXML void button_play8_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(7, button_play8); }
+    @FXML void button_play9_action(ActionEvent e) { SoundUtil.clik(); handlePlayerMove(8, button_play9); }
 
     // Game controls
     @FXML void Concede_button_action(ActionEvent event) {
+        SoundUtil.clik();
         System.out.println("You conceded.");
         disableAllButtons();
     }
 
-    @FXML void Pause_button_action(ActionEvent event) {
-        System.out.println("Game paused.");
+    @FXML void bttn_pause_action(ActionEvent event) {
+        SoundUtil.clik();
+        try {
+            Stage stage = (Stage) bttn_pause.getScene().getWindow();
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Pause.fxml"));
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML void Redo_button_action(ActionEvent event) {
+        SoundUtil.clik();
         System.out.println("Game restarted.");
         resetBoard();
     }

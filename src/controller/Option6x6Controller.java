@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import util.SoundUtil;
 
 public class Option6x6Controller {
 
@@ -14,6 +15,7 @@ public class Option6x6Controller {
 
     @FXML
     void bttn_6x6_ai(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Ai6x6.fxml"));
@@ -27,6 +29,7 @@ public class Option6x6Controller {
 
     @FXML
     void bttn_6x6_pvp(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/PVP6x6.fxml"));
@@ -40,6 +43,7 @@ public class Option6x6Controller {
 
     @FXML
     void bttn_back_action(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Option.fxml"));

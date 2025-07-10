@@ -14,7 +14,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.User;
-import util.UserSession;
+import util.SoundUtil;
 
 public class LoginController {
 
@@ -44,6 +44,7 @@ public class LoginController {
 
     @FXML
     void bttn_go_to_register_action(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) lbl_login.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Register.fxml"));
@@ -73,8 +74,9 @@ public class LoginController {
         Optional<User> user = userDAO.loginUser(username, password); 
 
         if (user.isPresent()) {
-            UserSession.init(user.get()); // ✅ unwraps Optional<User>
             lbl_login_status.setText("Login successful!");
+
+            SoundUtil.loopMusic("Music_Background.wav");
 
             try {
                 Stage stage = (Stage) lbl_login.getScene().getWindow();
@@ -95,6 +97,7 @@ public class LoginController {
 
     @FXML
     void checkbox_show_password_action(ActionEvent event) {
+        SoundUtil.clik();
          if (checkbox_show_password.isSelected()) {
             Textfield_password_login.setText(passwordfield_login.getText());
             Textfield_password_login.setVisible(true);

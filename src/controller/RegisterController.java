@@ -12,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.User;
+import util.*;
 
 public class RegisterController {
 
@@ -107,6 +108,8 @@ public class RegisterController {
         if (success) {
             lbl_register_status.setText("Registration successful!");
             lbl_register_status.setStyle("-fx-text-fill: green;");
+            
+            SoundUtil.loopMusic("Music_Background.wav");
 
             try {
                 Stage stage = (Stage) lbl_register.getScene().getWindow();

@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
@@ -20,7 +21,6 @@ public class PVP3x3Controller implements Initializable {
     @FXML private Button button_1x0, button_1x1, button_1x2;
     @FXML private Button button_2x0, button_2x1, button_2x2;
     @FXML private Button button_redo, button_concrede, button_pause;
-
     @FXML private Text winnerText;
 
     private List<Button> buttons;
@@ -67,42 +67,37 @@ public class PVP3x3Controller implements Initializable {
 
         String winner = null;
 
-        // Rows, Columns, Diagonals
         for (int i = 0; i < 3; i++) {
-            // Rows
             if (!board[i][0].isEmpty() &&
                 board[i][0].equals(board[i][1]) &&
-                board[i][1].equals(board[i][2]))
+                board[i][1].equals(board[i][2])) {
                 winner = board[i][0];
+            }
 
-            // Columns
             if (!board[0][i].isEmpty() &&
                 board[0][i].equals(board[1][i]) &&
-                board[1][i].equals(board[2][i]))
+                board[1][i].equals(board[2][i])) {
                 winner = board[0][i];
+            }
         }
 
-        // Diagonals
         if (!board[0][0].isEmpty() &&
             board[0][0].equals(board[1][1]) &&
-            board[1][1].equals(board[2][2]))
+            board[1][1].equals(board[2][2])) {
             winner = board[0][0];
+        }
 
         if (!board[0][2].isEmpty() &&
             board[0][2].equals(board[1][1]) &&
-            board[1][1].equals(board[2][0]))
+            board[1][1].equals(board[2][0])) {
             winner = board[0][2];
+        }
 
         if (winner != null) {
-            winnerText.setText(winner + " won!");
-            disableBoard();
+            goToResultScene(winner + " WON!");
         } else if (buttons.stream().allMatch(b -> !b.getText().isEmpty())) {
-            winnerText.setText("Draw!");
+            goToResultScene("DRAW!");
         }
-    }
-
-    private void disableBoard() {
-        buttons.forEach(b -> b.setDisable(true));
     }
 
     @FXML
@@ -112,26 +107,40 @@ public class PVP3x3Controller implements Initializable {
             b.setDisable(false);
         });
         playerTurn = 0;
-        winnerText.setText("Tic-Tac-Toe");
+        // winnerText.setText("Tic-Tac-Toe");
     }
 
     @FXML
     void button_concrede_on_action(ActionEvent event) {
-        loadScene("/fxml/Result.fxml");
+        goToResultScene("CONCEDE!");
     }
 
     @FXML
     void button_pause_on_action(ActionEvent event) {
-        loadScene("/fxml/Pause.fxml");
-    }
-
-    private void loadScene(String fxmlFile) {
         try {
-            Stage stage = (Stage) button_0x0.getScene().getWindow();
-            Scene scene = new Scene(FXMLLoader.load(getClass().getResource(fxmlFile)));
+            Stage stage = (Stage) button_pause.getScene().getWindow();
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Profile.fxml"));
             stage.setScene(scene);
+            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    private void goToResultScene(String resultMessage) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Result.fxml"));
+            Parent root = loader.load();
+
+            ResultController controller = loader.getController();
+            controller.setResultText(resultMessage);
+            controller.setFromScene("/fxml/PVP3x3.fxml"); 
+
+            Stage stage = (Stage) button_0x0.getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

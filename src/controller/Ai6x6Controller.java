@@ -3,7 +3,10 @@ package controller;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.util.*;
@@ -236,9 +239,22 @@ public class Ai6x6Controller {
     @FXML void button_play35_action(ActionEvent e) { handlePlayerMove(34); }
     @FXML void button_play36_action(ActionEvent e) { handlePlayerMove(35); }
 
-    @FXML void Concede_button_action(ActionEvent e) { disableAllButtons(); System.out.println("You gave up."); }
-    @FXML void Pause_button_action(ActionEvent e) { System.out.println("Paused."); }
-    @FXML void Redo_button_action(ActionEvent e) { resetBoard(); System.out.println("Game restarted."); }
+    @FXML void Concede_button_action(ActionEvent e) { 
+        disableAllButtons(); System.out.println("You gave up."); 
+    }
+    @FXML void Pause_button_action(ActionEvent event) {
+         try {
+            Stage stage = (Stage) Pause_button.getScene().getWindow();
+            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Pause.fxml"));
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+    }
+    @FXML void Redo_button_action(ActionEvent e) {
+        resetBoard(); System.out.println("Game restarted."); 
+    }
 }
 
 

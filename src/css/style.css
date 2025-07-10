@@ -1,5 +1,5 @@
 .bg_image {
-    -fx-background-image: url("file:///C:/Users/ASUS%20PC/OneDrive/Desktop/Tic%20Tac%20Toe%20Game/src/jghfd.jpg");
+    -fx-background-image: url("../resources/images/bg/jghfd.jpg");
 
     -fx-background-size: cover;
 }

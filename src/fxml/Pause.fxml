@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PauseController">
+<Scene xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PauseController">
     <AnchorPane prefHeight="750.0" prefWidth="360.0" styleClass="bg_image" stylesheets="@../css/style.css">
       <children>
          <ImageView fitHeight="619.0" fitWidth="385.0" layoutX="5.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">

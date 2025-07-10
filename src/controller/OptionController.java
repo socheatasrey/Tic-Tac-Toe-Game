@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import util.SoundUtil;
 
 public class OptionController {
 
@@ -17,6 +18,7 @@ public class OptionController {
 
     @FXML
     void bttn_3x3_option(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) button_profile.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Option3x3.fxml"));
@@ -30,6 +32,7 @@ public class OptionController {
 
     @FXML
     void bttn_6x6_option(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) button_profile.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Option6x6.fxml"));
@@ -42,6 +45,7 @@ public class OptionController {
 
     @FXML
     void button_profile_action(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) button_profile.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Profile.fxml"));
@@ -54,6 +58,7 @@ public class OptionController {
 
     @FXML
     void button_setting_action(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) button_profile.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Setting.fxml"));

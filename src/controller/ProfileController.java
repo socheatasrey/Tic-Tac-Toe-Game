@@ -15,6 +15,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.GameHistoryEntry;
 import model.User;
+import util.SoundUtil;
 
 import java.io.File;
 import java.net.URL;
@@ -48,6 +49,7 @@ public class ProfileController implements Initializable {
 
     @FXML
     void editName(ActionEvent event) {
+        SoundUtil.clik();
         TextInputDialog dialog = new TextInputDialog(currentUser.getUsername());
         dialog.setHeaderText("Edit Name");
         dialog.showAndWait().ifPresent(newName -> {
@@ -59,6 +61,7 @@ public class ProfileController implements Initializable {
 
     @FXML
     void editNationality(ActionEvent event) {
+        SoundUtil.clik();
         List<String> countries = Arrays.asList("Cambodia", "Thailand", "Vietnam", "USA", "France");
         ChoiceDialog<String> dialog = new ChoiceDialog<>(currentUser.getNationality(), countries);
         dialog.setHeaderText("Edit Nationality");
@@ -71,6 +74,7 @@ public class ProfileController implements Initializable {
 
     @FXML
     void changeProfilePicture(MouseEvent event) {
+        SoundUtil.clik();
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Choose Profile Picture");
         fileChooser.getExtensionFilters().add(

@@ -3,16 +3,24 @@ package util;
 import javafx.scene.media.AudioClip;
 import java.util.HashMap;
 
-public class soundutil {
-    private static double volume = 0.5; // Default volume
-    private static boolean isMuted = false;
+public class SoundUtil {
+
+    private static double volume = 0.5;
+
+    private static boolean isMusicMuted = false;
+    private static boolean isSoundMuted = false;
 
     private static final HashMap<String, AudioClip> loops = new HashMap<>();
 
+    public static void clik(){
+        play("click_sound_effect.wav");
+    }
+
     public static void play(String filename) {
         try {
-            if (isMuted) return;
-            AudioClip clip = new AudioClip(filename);
+            if (isSoundMuted) return;
+            String url = CurrentTempUtil.getResourcePath("src/resources/audio/") + filename;
+            AudioClip clip = new AudioClip(url);
             clip.setVolume(volume);
             clip.play();
         } catch (Exception e) {
@@ -23,7 +31,9 @@ public class soundutil {
 
     public static AudioClip loopMusic(String filename) {
         try {
-            AudioClip clip = new AudioClip(filename);
+            if (isMusicMuted) return null;
+            String url = CurrentTempUtil.getResourcePath("src/resources/audio/") + filename;
+            AudioClip clip = new AudioClip(url);
             clip.setCycleCount(AudioClip.INDEFINITE);
             clip.setVolume(volume);
             clip.play();
@@ -54,18 +64,26 @@ public class soundutil {
         return volume;
     }
 
-    public static void setMuted(boolean muted) {
-        isMuted = muted;
+    // MUSIC MUTE
+    public static void setMusicMuted(boolean muted) {
+        isMusicMuted = muted;
         if (muted) {
             for (AudioClip clip : loops.values()) {
                 clip.stop();
             }
-        } else {
-            // Optional: Restart music if needed
         }
     }
 
-    public static boolean isMuted() {
-        return isMuted;
+    public static boolean isMusicMuted() {
+        return isMusicMuted;
+    }
+
+    // SOUND MUTE
+    public static void setSoundMuted(boolean muted) {
+        isSoundMuted = muted;
+    }
+
+    public static boolean isSoundMuted() {
+        return isSoundMuted;
     }
 }

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import util.SoundUtil;
 
 public class Option3x3Controller {
 
@@ -14,6 +15,7 @@ public class Option3x3Controller {
 
     @FXML
     void bttn_ai_3x3_play(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Ai3x3.fxml"));
@@ -27,6 +29,7 @@ public class Option3x3Controller {
 
     @FXML
     void bttn_back_action(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Option.fxml"));
@@ -41,6 +44,7 @@ public class Option3x3Controller {
 
     @FXML
     void bttn_pvp_play(ActionEvent event) {
+        SoundUtil.clik();
         try {
             Stage stage = (Stage) bttn_back.getScene().getWindow();
             Scene scene = FXMLLoader.load(getClass().getResource("/fxml/PVP3x3.fxml"));

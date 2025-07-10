@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
+import util.SoundUtil;
 
 public class PauseController {
 
@@ -30,11 +31,13 @@ public class PauseController {
 
     @FXML
     void button_continue_action(ActionEvent event) {
+        SoundUtil.clik();
 
     }
 
     @FXML
     void button_home_action(ActionEvent event) {
+        SoundUtil.clik();
 
         try {
 
@@ -53,6 +56,7 @@ public class PauseController {
 
     @FXML
     void button_playagain_action(ActionEvent event) {
+        SoundUtil.clik();
 
     }
 
