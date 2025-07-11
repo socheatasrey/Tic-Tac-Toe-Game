@@ -234,8 +234,13 @@ public class Ai6x6Controller {
     @FXML void Concede_button_action(ActionEvent e) { goToResultScene("CONCEDE!"); }
     @FXML void Pause_button_action(ActionEvent event) {
         try {
-            Stage stage = (Stage) button_play1.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Pause.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Pause.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            PauseController controller = loader.getController();
+            controller.setPreviousScene("/fxml/Ai6x6.fxml");
+
+            Stage stage = (Stage) Concede_button.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

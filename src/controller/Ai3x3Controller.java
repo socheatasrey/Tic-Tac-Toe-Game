@@ -181,9 +181,14 @@ public class Ai3x3Controller {
     }
 
     @FXML void bttn_pause_action(ActionEvent event) {
-        try{
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Pause.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            PauseController controller = loader.getController();
+            controller.setPreviousScene("/fxml/Ai3x3.fxml");
+
             Stage stage = (Stage) Concede_button.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Pause.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {

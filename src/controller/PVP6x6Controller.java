@@ -147,8 +147,13 @@ public class PVP6x6Controller implements Initializable {
     @FXML
     void button_pause_on_action(ActionEvent event) {
         try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Pause.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            PauseController controller = loader.getController();
+            controller.setPreviousScene("/fxml/PVP6x6.fxml");
+
             Stage stage = (Stage) button_0x0.getScene().getWindow();
-            Scene scene = FXMLLoader.load(getClass().getResource("/fxml/Pause.fxml"));
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) {
