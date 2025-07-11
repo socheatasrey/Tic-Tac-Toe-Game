@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
 import util.CurrentTempUtil;
@@ -21,6 +22,7 @@ public class PVP6x6Controller implements Initializable {
     @FXML private Button button_concede;
     @FXML private Button button_pause;
     @FXML private Button button_redo;
+    @FXML private Label lbl_player1, lbl_player2;
 
     private List<Button> buttons;
     private int playerTurn = 0;
@@ -43,6 +45,9 @@ public class PVP6x6Controller implements Initializable {
         dialog.showAndWait().ifPresent(opponentName -> {
             CurrentTempUtil.currentProgress.setOpponetName(opponentName);
         });
+
+        lbl_player1.setText(CurrentTempUtil.currentUser.getUsername());
+        lbl_player2.setText(CurrentTempUtil.currentProgress.getOpponentName());
 
         CurrentTempUtil.currentProgress.toString();
         buttons = Arrays.asList(
@@ -121,10 +126,11 @@ public class PVP6x6Controller implements Initializable {
                     winner = s;
                 }
             }
+
         }
 
         if (winner != null) {
-            goToResultScene("WON");
+            goToResultScene("WIN");
         } else if (buttons.stream().allMatch(b -> !b.getText().isEmpty())) {
             goToResultScene("DRAW");
         }

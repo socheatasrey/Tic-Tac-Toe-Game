@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -23,7 +24,7 @@ public class PVP3x3Controller implements Initializable {
     @FXML private Button button_1x0, button_1x1, button_1x2;
     @FXML private Button button_2x0, button_2x1, button_2x2;
     @FXML private Button button_redo, button_concrede, button_pause;
-    @FXML private Text winnerText;
+    @FXML private Label lbl_player1,lbl_player2;
 
     private List<Button> buttons;
     private int playerTurn = 0;
@@ -31,14 +32,21 @@ public class PVP3x3Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+
         TextInputDialog dialog = new TextInputDialog("Player 2");
         dialog.setTitle("Enter Opponent Name");
         dialog.setHeaderText("Player vs Player");
         dialog.setContentText("Enter Player 2's name:");
+        
 
         dialog.showAndWait().ifPresent(opponentName -> {
             CurrentTempUtil.currentProgress.setOpponetName(opponentName);
+            lbl_player2.setText(opponentName);
         });
+
+        lbl_player1.setText(CurrentTempUtil.currentUser.getUsername());
+    
+
 
         CurrentTempUtil.printCurrentProgress();
         buttons = Arrays.asList(
@@ -58,7 +66,6 @@ public class PVP3x3Controller implements Initializable {
             });
         });
 
-        winnerText.setText("Tic-Tac-Toe");
     }
 
     private void setPlayerSymbol(Button button) {
@@ -107,7 +114,7 @@ public class PVP3x3Controller implements Initializable {
         }
 
         if (winner != null) {
-            goToResultScene("WON");
+            goToResultScene("WIN");
         } else if (buttons.stream().allMatch(b -> !b.getText().isEmpty())) {
             goToResultScene("DRAW");
         }

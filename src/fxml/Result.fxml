@@ -16,36 +16,36 @@
             <Image url="@../resources/images/frame_bg.png" />
          </image>
       </ImageView>
-      <Button fx:id="button_6x6" layoutX="104.0" layoutY="350.0" mnemonicParsing="false" onAction="#button_6x6_action" prefHeight="50.0" prefWidth="150.0" styleClass="btt_login" stylesheets="@../../../../Tic-Tac-Toe-Game/Tic-Tac-Toe-Game/src/css/style.css" text="6 x 6" textFill="#2d3d2d">
+      <Button fx:id="button_6x6" layoutX="104.0" layoutY="350.0" mnemonicParsing="false" onAction="#button_6x6_action" prefHeight="50.0" prefWidth="150.0" styleClass="btt_login" text="6 x 6" textFill="#2d3d2d">
          <font>
             <Font name="Copperplate Gothic Bold" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="btn_home" layoutX="72.0" layoutY="422.0" onAction="#btn_home_on_action" prefHeight="30.0" prefWidth="100.0" styleClass="btt_home" stylesheets="@../../../../Tic-Tac-Toe-Game/Tic-Tac-Toe-Game/src/css/style.css">
+      <Button fx:id="btn_home" layoutX="72.0" layoutY="422.0" onAction="#btn_home_on_action" prefHeight="30.0" prefWidth="100.0" styleClass="btt_home">
          <font>
             <Font size="36.0" />
          </font>
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Tic-Tac-Toe-Game/Tic-Tac-Toe-Game/src/resources/images/home.png" />
+                  <Image url="@../resources/images/home.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btn_restart" layoutX="192.0" layoutY="422.0" onAction="#btn_restart_on_action" prefHeight="30.0" prefWidth="100.0" styleClass="btt_home" stylesheets="@../../../../Tic-Tac-Toe-Game/Tic-Tac-Toe-Game/src/css/style.css">
+      <Button fx:id="btn_restart" layoutX="192.0" layoutY="422.0" onAction="#btn_restart_on_action" prefHeight="30.0" prefWidth="100.0" styleClass="btt_home">
          <font>
             <Font size="36.0" />
          </font>
          <graphic>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Tic-Tac-Toe-Game/Tic-Tac-Toe-Game/src/resources/images/refresh.png" />
+                  <Image url="@../resources/images/refresh.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="button_3x3" layoutX="104.0" layoutY="268.0" mnemonicParsing="false" onAction="#button_3x3_action" prefHeight="50.0" prefWidth="150.0" styleClass="btt_login" stylesheets="@../../../../Tic-Tac-Toe-Game/Tic-Tac-Toe-Game/src/css/style.css" text="3 x 3" textFill="#2d3d2d">
+      <Button fx:id="button_3x3" layoutX="104.0" layoutY="268.0" mnemonicParsing="false" onAction="#button_3x3_action" prefHeight="50.0" prefWidth="150.0" styleClass="btt_login" text="3 x 3" textFill="#2d3d2d">
          <font>
             <Font name="Copperplate Gothic Bold" size="24.0" />
          </font>
